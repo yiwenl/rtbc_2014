@@ -1,0 +1,502 @@
+// !$*UTF8*$!
+{
+	archiveVersion = 1;
+	classes = {
+	};
+	objectVersion = 46;
+	objects = {
+
+/* Begin PBXBuildFile section */
+		0091D8F90E81B9330029341E /* OpenGL.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 0091D8F80E81B9330029341E /* OpenGL.framework */; };
+		00B784B30FF439BC000DE1D7 /* Accelerate.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 00B784AF0FF439BC000DE1D7 /* Accelerate.framework */; };
+		00B784B40FF439BC000DE1D7 /* AudioToolbox.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 00B784B00FF439BC000DE1D7 /* AudioToolbox.framework */; };
+		00B784B50FF439BC000DE1D7 /* AudioUnit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 00B784B10FF439BC000DE1D7 /* AudioUnit.framework */; };
+		00B784B60FF439BC000DE1D7 /* CoreAudio.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 00B784B20FF439BC000DE1D7 /* CoreAudio.framework */; };
+		4330ECB85F864F5DA3C497A4 /* CinderFreenect.cpp in Sources */ = {isa = PBXBuildFile; fileRef = A4E3D8A443AA461599999282 /* CinderFreenect.cpp */; };
+		4754340106E8457CA967E639 /* CalligraphyTouchApp.cpp in Sources */ = {isa = PBXBuildFile; fileRef = 690B37F9026249E0BED1FEF9 /* CalligraphyTouchApp.cpp */; };
+		486E74306C654264BC266C11 /* CinderApp.icns in Resources */ = {isa = PBXBuildFile; fileRef = A0CC1917E1414E5FB786EBB0 /* CinderApp.icns */; };
+		5323E6B20EAFCA74003A9687 /* CoreVideo.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 5323E6B10EAFCA74003A9687 /* CoreVideo.framework */; };
+		5323E6B60EAFCA7E003A9687 /* QTKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 5323E6B50EAFCA7E003A9687 /* QTKit.framework */; };
+		53EA5BE236C242889D1221EC /* QuickTime.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = D951E0BA7E2E4551979A018E /* QuickTime.framework */; };
+		676D08828FC04FC7B463DF07 /* usb_libusb10.c in Sources */ = {isa = PBXBuildFile; fileRef = FFFB9F51AA3947B3A2DFD9E7 /* usb_libusb10.c */; };
+		854B2C70197D17360034F07E /* brushes in Resources */ = {isa = PBXBuildFile; fileRef = 854B2C6B197D17360034F07E /* brushes */; };
+		854B2C71197D17360034F07E /* common in Resources */ = {isa = PBXBuildFile; fileRef = 854B2C6C197D17360034F07E /* common */; };
+		854B2C72197D17360034F07E /* drops in Resources */ = {isa = PBXBuildFile; fileRef = 854B2C6D197D17360034F07E /* drops */; };
+		854B2C73197D17360034F07E /* shaders in Resources */ = {isa = PBXBuildFile; fileRef = 854B2C6E197D17360034F07E /* shaders */; };
+		854B2C74197D17360034F07E /* videos in Resources */ = {isa = PBXBuildFile; fileRef = 854B2C6F197D17360034F07E /* videos */; };
+		854B2C8E197D17450034F07E /* MathUtils.cpp in Sources */ = {isa = PBXBuildFile; fileRef = 854B2C76197D17450034F07E /* MathUtils.cpp */; };
+		854B2C8F197D17450034F07E /* MeshUtils.cpp in Sources */ = {isa = PBXBuildFile; fileRef = 854B2C78197D17450034F07E /* MeshUtils.cpp */; };
+		854B2C90197D17450034F07E /* Scene.cpp in Sources */ = {isa = PBXBuildFile; fileRef = 854B2C7A197D17450034F07E /* Scene.cpp */; };
+		854B2C91197D17450034F07E /* SceneQuat.cpp in Sources */ = {isa = PBXBuildFile; fileRef = 854B2C7C197D17450034F07E /* SceneQuat.cpp */; };
+		854B2C92197D17450034F07E /* Utils.cpp in Sources */ = {isa = PBXBuildFile; fileRef = 854B2C7E197D17450034F07E /* Utils.cpp */; };
+		854B2C93197D17450034F07E /* View.cpp in Sources */ = {isa = PBXBuildFile; fileRef = 854B2C80197D17450034F07E /* View.cpp */; };
+		854B2C94197D17450034F07E /* GlobalSettings.cpp in Sources */ = {isa = PBXBuildFile; fileRef = 854B2C82197D17450034F07E /* GlobalSettings.cpp */; };
+		854B2C95197D17450034F07E /* InkDrop.cpp in Sources */ = {isa = PBXBuildFile; fileRef = 854B2C84197D17450034F07E /* InkDrop.cpp */; };
+		854B2C96197D17450034F07E /* SceneRibbon.cpp in Sources */ = {isa = PBXBuildFile; fileRef = 854B2C86197D17450034F07E /* SceneRibbon.cpp */; };
+		854B2C97197D17450034F07E /* ViewCopy.cpp in Sources */ = {isa = PBXBuildFile; fileRef = 854B2C88197D17450034F07E /* ViewCopy.cpp */; };
+		854B2C98197D17450034F07E /* ViewDrop.cpp in Sources */ = {isa = PBXBuildFile; fileRef = 854B2C8A197D17450034F07E /* ViewDrop.cpp */; };
+		854B2C99197D17450034F07E /* ViewRibbon.cpp in Sources */ = {isa = PBXBuildFile; fileRef = 854B2C8C197D17450034F07E /* ViewRibbon.cpp */; };
+		8785C5E953E14C7AA91EBC69 /* IOKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 57D2670D007F418C8A451304 /* IOKit.framework */; };
+		8D11072F0486CEB800E47090 /* Cocoa.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 1058C7A1FEA54F0111CA2CBB /* Cocoa.framework */; };
+		A62D963F75044CFAA3A2B8AE /* registration.c in Sources */ = {isa = PBXBuildFile; fileRef = 35DCC157CCA044D8964E921E /* registration.c */; };
+		D3A8D0BAC2D54477A5E49285 /* core.c in Sources */ = {isa = PBXBuildFile; fileRef = D62E9BACBB054E1AA7A5F806 /* core.c */; };
+		D69B41FE4A5149B389A8A3A8 /* tilt.c in Sources */ = {isa = PBXBuildFile; fileRef = 88F8E1C3F3C7465FBCC09542 /* tilt.c */; };
+		FD9C37808B484BE1A8099CB6 /* cameras.c in Sources */ = {isa = PBXBuildFile; fileRef = 269CFC90BE3144A5987B6927 /* cameras.c */; };
+/* End PBXBuildFile section */
+
+/* Begin PBXFileReference section */
+		0091D8F80E81B9330029341E /* OpenGL.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = OpenGL.framework; path = /System/Library/Frameworks/OpenGL.framework; sourceTree = "<absolute>"; };
+		00B784AF0FF439BC000DE1D7 /* Accelerate.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Accelerate.framework; path = System/Library/Frameworks/Accelerate.framework; sourceTree = SDKROOT; };
+		00B784B00FF439BC000DE1D7 /* AudioToolbox.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = AudioToolbox.framework; path = System/Library/Frameworks/AudioToolbox.framework; sourceTree = SDKROOT; };
+		00B784B10FF439BC000DE1D7 /* AudioUnit.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = AudioUnit.framework; path = System/Library/Frameworks/AudioUnit.framework; sourceTree = SDKROOT; };
+		00B784B20FF439BC000DE1D7 /* CoreAudio.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = CoreAudio.framework; path = System/Library/Frameworks/CoreAudio.framework; sourceTree = SDKROOT; };
+		1058C7A1FEA54F0111CA2CBB /* Cocoa.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Cocoa.framework; path = /System/Library/Frameworks/Cocoa.framework; sourceTree = "<absolute>"; };
+		128127F1459D48A79EDAED89 /* CinderFreenect.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; name = CinderFreenect.h; path = "../blocks/Cinder-Freenect/src/CinderFreenect.h"; sourceTree = "<group>"; };
+		269CFC90BE3144A5987B6927 /* cameras.c */ = {isa = PBXFileReference; lastKnownFileType = "\"\""; name = cameras.c; path = "../blocks/Cinder-Freenect/src/freenect/cameras.c"; sourceTree = "<group>"; };
+		29B97324FDCFA39411CA2CEA /* AppKit.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = AppKit.framework; path = /System/Library/Frameworks/AppKit.framework; sourceTree = "<absolute>"; };
+		29B97325FDCFA39411CA2CEA /* Foundation.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Foundation.framework; path = /System/Library/Frameworks/Foundation.framework; sourceTree = "<absolute>"; };
+		308D04CDB39E4D57A68728F7 /* Resources.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; name = Resources.h; path = ../include/Resources.h; sourceTree = "<group>"; };
+		35DCC157CCA044D8964E921E /* registration.c */ = {isa = PBXFileReference; lastKnownFileType = "\"\""; name = registration.c; path = "../blocks/Cinder-Freenect/src/freenect/registration.c"; sourceTree = "<group>"; };
+		5323E6B10EAFCA74003A9687 /* CoreVideo.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = CoreVideo.framework; path = /System/Library/Frameworks/CoreVideo.framework; sourceTree = "<absolute>"; };
+		5323E6B50EAFCA7E003A9687 /* QTKit.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = QTKit.framework; path = /System/Library/Frameworks/QTKit.framework; sourceTree = "<absolute>"; };
+		57D2670D007F418C8A451304 /* IOKit.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = IOKit.framework; path = System/Library/Frameworks/IOKit.framework; sourceTree = SDKROOT; };
+		5E3D8BA5BD8C47E3ABADADEA /* CalligraphyTouch_Prefix.pch */ = {isa = PBXFileReference; lastKnownFileType = "\"\""; path = CalligraphyTouch_Prefix.pch; sourceTree = "<group>"; };
+		690B37F9026249E0BED1FEF9 /* CalligraphyTouchApp.cpp */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.cpp; name = CalligraphyTouchApp.cpp; path = ../src/CalligraphyTouchApp.cpp; sourceTree = "<group>"; };
+		854B2C6B197D17360034F07E /* brushes */ = {isa = PBXFileReference; lastKnownFileType = folder; name = brushes; path = ../assets/brushes; sourceTree = "<group>"; };
+		854B2C6C197D17360034F07E /* common */ = {isa = PBXFileReference; lastKnownFileType = folder; name = common; path = ../assets/common; sourceTree = "<group>"; };
+		854B2C6D197D17360034F07E /* drops */ = {isa = PBXFileReference; lastKnownFileType = folder; name = drops; path = ../assets/drops; sourceTree = "<group>"; };
+		854B2C6E197D17360034F07E /* shaders */ = {isa = PBXFileReference; lastKnownFileType = folder; name = shaders; path = ../assets/shaders; sourceTree = "<group>"; };
+		854B2C6F197D17360034F07E /* videos */ = {isa = PBXFileReference; lastKnownFileType = folder; name = videos; path = ../assets/videos; sourceTree = "<group>"; };
+		854B2C76197D17450034F07E /* MathUtils.cpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.cpp; path = MathUtils.cpp; sourceTree = "<group>"; };
+		854B2C77197D17450034F07E /* MathUtils.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = MathUtils.h; sourceTree = "<group>"; };
+		854B2C78197D17450034F07E /* MeshUtils.cpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.cpp; path = MeshUtils.cpp; sourceTree = "<group>"; };
+		854B2C79197D17450034F07E /* MeshUtils.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = MeshUtils.h; sourceTree = "<group>"; };
+		854B2C7A197D17450034F07E /* Scene.cpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.cpp; path = Scene.cpp; sourceTree = "<group>"; };
+		854B2C7B197D17450034F07E /* Scene.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = Scene.h; sourceTree = "<group>"; };
+		854B2C7C197D17450034F07E /* SceneQuat.cpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.cpp; path = SceneQuat.cpp; sourceTree = "<group>"; };
+		854B2C7D197D17450034F07E /* SceneQuat.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = SceneQuat.h; sourceTree = "<group>"; };
+		854B2C7E197D17450034F07E /* Utils.cpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.cpp; path = Utils.cpp; sourceTree = "<group>"; };
+		854B2C7F197D17450034F07E /* Utils.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = Utils.h; sourceTree = "<group>"; };
+		854B2C80197D17450034F07E /* View.cpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.cpp; path = View.cpp; sourceTree = "<group>"; };
+		854B2C81197D17450034F07E /* View.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = View.h; sourceTree = "<group>"; };
+		854B2C82197D17450034F07E /* GlobalSettings.cpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.cpp; name = GlobalSettings.cpp; path = ../src/GlobalSettings.cpp; sourceTree = "<group>"; };
+		854B2C83197D17450034F07E /* GlobalSettings.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = GlobalSettings.h; path = ../src/GlobalSettings.h; sourceTree = "<group>"; };
+		854B2C84197D17450034F07E /* InkDrop.cpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.cpp; name = InkDrop.cpp; path = ../src/InkDrop.cpp; sourceTree = "<group>"; };
+		854B2C85197D17450034F07E /* InkDrop.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = InkDrop.h; path = ../src/InkDrop.h; sourceTree = "<group>"; };
+		854B2C86197D17450034F07E /* SceneRibbon.cpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.cpp; name = SceneRibbon.cpp; path = ../src/SceneRibbon.cpp; sourceTree = "<group>"; };
+		854B2C87197D17450034F07E /* SceneRibbon.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = SceneRibbon.h; path = ../src/SceneRibbon.h; sourceTree = "<group>"; };
+		854B2C88197D17450034F07E /* ViewCopy.cpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.cpp; name = ViewCopy.cpp; path = ../src/ViewCopy.cpp; sourceTree = "<group>"; };
+		854B2C89197D17450034F07E /* ViewCopy.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = ViewCopy.h; path = ../src/ViewCopy.h; sourceTree = "<group>"; };
+		854B2C8A197D17450034F07E /* ViewDrop.cpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.cpp; name = ViewDrop.cpp; path = ../src/ViewDrop.cpp; sourceTree = "<group>"; };
+		854B2C8B197D17450034F07E /* ViewDrop.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = ViewDrop.h; path = ../src/ViewDrop.h; sourceTree = "<group>"; };
+		854B2C8C197D17450034F07E /* ViewRibbon.cpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.cpp; name = ViewRibbon.cpp; path = ../src/ViewRibbon.cpp; sourceTree = "<group>"; };
+		854B2C8D197D17450034F07E /* ViewRibbon.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = ViewRibbon.h; path = ../src/ViewRibbon.h; sourceTree = "<group>"; };
+		88F8E1C3F3C7465FBCC09542 /* tilt.c */ = {isa = PBXFileReference; lastKnownFileType = "\"\""; name = tilt.c; path = "../blocks/Cinder-Freenect/src/freenect/tilt.c"; sourceTree = "<group>"; };
+		8D1107320486CEB800E47090 /* CalligraphyTouch.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = CalligraphyTouch.app; sourceTree = BUILT_PRODUCTS_DIR; };
+		A0CC1917E1414E5FB786EBB0 /* CinderApp.icns */ = {isa = PBXFileReference; lastKnownFileType = image.icns; name = CinderApp.icns; path = ../resources/CinderApp.icns; sourceTree = "<group>"; };
+		A4E3D8A443AA461599999282 /* CinderFreenect.cpp */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.cpp; name = CinderFreenect.cpp; path = "../blocks/Cinder-Freenect/src/CinderFreenect.cpp"; sourceTree = "<group>"; };
+		D62E9BACBB054E1AA7A5F806 /* core.c */ = {isa = PBXFileReference; lastKnownFileType = "\"\""; name = core.c; path = "../blocks/Cinder-Freenect/src/freenect/core.c"; sourceTree = "<group>"; };
+		D951E0BA7E2E4551979A018E /* QuickTime.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = QuickTime.framework; path = System/Library/Frameworks/QuickTime.framework; sourceTree = SDKROOT; };
+		F48AE232DA5B4F4F9CA910BD /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		FFFB9F51AA3947B3A2DFD9E7 /* usb_libusb10.c */ = {isa = PBXFileReference; lastKnownFileType = "\"\""; name = usb_libusb10.c; path = "../blocks/Cinder-Freenect/src/freenect/usb_libusb10.c"; sourceTree = "<group>"; };
+/* End PBXFileReference section */
+
+/* Begin PBXFrameworksBuildPhase section */
+		8D11072E0486CEB800E47090 /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				8D11072F0486CEB800E47090 /* Cocoa.framework in Frameworks */,
+				0091D8F90E81B9330029341E /* OpenGL.framework in Frameworks */,
+				5323E6B20EAFCA74003A9687 /* CoreVideo.framework in Frameworks */,
+				5323E6B60EAFCA7E003A9687 /* QTKit.framework in Frameworks */,
+				00B784B30FF439BC000DE1D7 /* Accelerate.framework in Frameworks */,
+				00B784B40FF439BC000DE1D7 /* AudioToolbox.framework in Frameworks */,
+				00B784B50FF439BC000DE1D7 /* AudioUnit.framework in Frameworks */,
+				00B784B60FF439BC000DE1D7 /* CoreAudio.framework in Frameworks */,
+				8785C5E953E14C7AA91EBC69 /* IOKit.framework in Frameworks */,
+				53EA5BE236C242889D1221EC /* QuickTime.framework in Frameworks */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXFrameworksBuildPhase section */
+
+/* Begin PBXGroup section */
+		01B97315FEAEA392516A2CEA /* Blocks */ = {
+			isa = PBXGroup;
+			children = (
+				54BF00FDB5C143DF9B886FBD /* Cinder-Freenect */,
+			);
+			name = Blocks;
+			sourceTree = "<group>";
+		};
+		080E96DDFE201D6D7F000001 /* Source */ = {
+			isa = PBXGroup;
+			children = (
+				690B37F9026249E0BED1FEF9 /* CalligraphyTouchApp.cpp */,
+				854B2C82197D17450034F07E /* GlobalSettings.cpp */,
+				854B2C84197D17450034F07E /* InkDrop.cpp */,
+				854B2C86197D17450034F07E /* SceneRibbon.cpp */,
+				854B2C9A197D17590034F07E /* views */,
+				854B2C75197D17450034F07E /* bongiovi */,
+			);
+			name = Source;
+			sourceTree = "<group>";
+		};
+		1058C7A0FEA54F0111CA2CBB /* Linked Frameworks */ = {
+			isa = PBXGroup;
+			children = (
+				00B784AF0FF439BC000DE1D7 /* Accelerate.framework */,
+				00B784B00FF439BC000DE1D7 /* AudioToolbox.framework */,
+				00B784B10FF439BC000DE1D7 /* AudioUnit.framework */,
+				00B784B20FF439BC000DE1D7 /* CoreAudio.framework */,
+				5323E6B50EAFCA7E003A9687 /* QTKit.framework */,
+				5323E6B10EAFCA74003A9687 /* CoreVideo.framework */,
+				0091D8F80E81B9330029341E /* OpenGL.framework */,
+				1058C7A1FEA54F0111CA2CBB /* Cocoa.framework */,
+			);
+			name = "Linked Frameworks";
+			sourceTree = "<group>";
+		};
+		1058C7A2FEA54F0111CA2CBB /* Other Frameworks */ = {
+			isa = PBXGroup;
+			children = (
+				29B97324FDCFA39411CA2CEA /* AppKit.framework */,
+				29B97325FDCFA39411CA2CEA /* Foundation.framework */,
+			);
+			name = "Other Frameworks";
+			sourceTree = "<group>";
+		};
+		19C28FACFE9D520D11CA2CBB /* Products */ = {
+			isa = PBXGroup;
+			children = (
+				8D1107320486CEB800E47090 /* CalligraphyTouch.app */,
+			);
+			name = Products;
+			sourceTree = "<group>";
+		};
+		29B97314FDCFA39411CA2CEA /* CalligraphyTouch */ = {
+			isa = PBXGroup;
+			children = (
+				01B97315FEAEA392516A2CEA /* Blocks */,
+				29B97315FDCFA39411CA2CEA /* Headers */,
+				080E96DDFE201D6D7F000001 /* Source */,
+				29B97317FDCFA39411CA2CEA /* Resources */,
+				29B97323FDCFA39411CA2CEA /* Frameworks */,
+				19C28FACFE9D520D11CA2CBB /* Products */,
+			);
+			name = CalligraphyTouch;
+			sourceTree = "<group>";
+		};
+		29B97315FDCFA39411CA2CEA /* Headers */ = {
+			isa = PBXGroup;
+			children = (
+				854B2C83197D17450034F07E /* GlobalSettings.h */,
+				854B2C85197D17450034F07E /* InkDrop.h */,
+				854B2C87197D17450034F07E /* SceneRibbon.h */,
+				854B2C89197D17450034F07E /* ViewCopy.h */,
+				854B2C8B197D17450034F07E /* ViewDrop.h */,
+				854B2C8D197D17450034F07E /* ViewRibbon.h */,
+				308D04CDB39E4D57A68728F7 /* Resources.h */,
+				5E3D8BA5BD8C47E3ABADADEA /* CalligraphyTouch_Prefix.pch */,
+			);
+			name = Headers;
+			sourceTree = "<group>";
+		};
+		29B97317FDCFA39411CA2CEA /* Resources */ = {
+			isa = PBXGroup;
+			children = (
+				854B2C6B197D17360034F07E /* brushes */,
+				854B2C6C197D17360034F07E /* common */,
+				854B2C6D197D17360034F07E /* drops */,
+				854B2C6E197D17360034F07E /* shaders */,
+				854B2C6F197D17360034F07E /* videos */,
+				A0CC1917E1414E5FB786EBB0 /* CinderApp.icns */,
+				F48AE232DA5B4F4F9CA910BD /* Info.plist */,
+			);
+			name = Resources;
+			sourceTree = "<group>";
+		};
+		29B97323FDCFA39411CA2CEA /* Frameworks */ = {
+			isa = PBXGroup;
+			children = (
+				1058C7A0FEA54F0111CA2CBB /* Linked Frameworks */,
+				1058C7A2FEA54F0111CA2CBB /* Other Frameworks */,
+				57D2670D007F418C8A451304 /* IOKit.framework */,
+				D951E0BA7E2E4551979A018E /* QuickTime.framework */,
+			);
+			name = Frameworks;
+			sourceTree = "<group>";
+		};
+		2F90A8FD31384C349849D1C9 /* src */ = {
+			isa = PBXGroup;
+			children = (
+				128127F1459D48A79EDAED89 /* CinderFreenect.h */,
+				A4E3D8A443AA461599999282 /* CinderFreenect.cpp */,
+				D7639BDF0D674D00AC02BC92 /* freenect */,
+			);
+			name = src;
+			sourceTree = "<group>";
+		};
+		54BF00FDB5C143DF9B886FBD /* Cinder-Freenect */ = {
+			isa = PBXGroup;
+			children = (
+				2F90A8FD31384C349849D1C9 /* src */,
+			);
+			name = "Cinder-Freenect";
+			sourceTree = "<group>";
+		};
+		854B2C75197D17450034F07E /* bongiovi */ = {
+			isa = PBXGroup;
+			children = (
+				854B2C76197D17450034F07E /* MathUtils.cpp */,
+				854B2C77197D17450034F07E /* MathUtils.h */,
+				854B2C78197D17450034F07E /* MeshUtils.cpp */,
+				854B2C79197D17450034F07E /* MeshUtils.h */,
+				854B2C7A197D17450034F07E /* Scene.cpp */,
+				854B2C7B197D17450034F07E /* Scene.h */,
+				854B2C7C197D17450034F07E /* SceneQuat.cpp */,
+				854B2C7D197D17450034F07E /* SceneQuat.h */,
+				854B2C7E197D17450034F07E /* Utils.cpp */,
+				854B2C7F197D17450034F07E /* Utils.h */,
+				854B2C80197D17450034F07E /* View.cpp */,
+				854B2C81197D17450034F07E /* View.h */,
+			);
+			name = bongiovi;
+			path = ../src/bongiovi;
+			sourceTree = "<group>";
+		};
+		854B2C9A197D17590034F07E /* views */ = {
+			isa = PBXGroup;
+			children = (
+				854B2C88197D17450034F07E /* ViewCopy.cpp */,
+				854B2C8A197D17450034F07E /* ViewDrop.cpp */,
+				854B2C8C197D17450034F07E /* ViewRibbon.cpp */,
+			);
+			name = views;
+			sourceTree = "<group>";
+		};
+		D7639BDF0D674D00AC02BC92 /* freenect */ = {
+			isa = PBXGroup;
+			children = (
+				269CFC90BE3144A5987B6927 /* cameras.c */,
+				D62E9BACBB054E1AA7A5F806 /* core.c */,
+				35DCC157CCA044D8964E921E /* registration.c */,
+				88F8E1C3F3C7465FBCC09542 /* tilt.c */,
+				FFFB9F51AA3947B3A2DFD9E7 /* usb_libusb10.c */,
+			);
+			name = freenect;
+			sourceTree = "<group>";
+		};
+/* End PBXGroup section */
+
+/* Begin PBXNativeTarget section */
+		8D1107260486CEB800E47090 /* CalligraphyTouch */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = C01FCF4A08A954540054247B /* Build configuration list for PBXNativeTarget "CalligraphyTouch" */;
+			buildPhases = (
+				8D1107290486CEB800E47090 /* Resources */,
+				8D11072C0486CEB800E47090 /* Sources */,
+				8D11072E0486CEB800E47090 /* Frameworks */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+			);
+			name = CalligraphyTouch;
+			productInstallPath = "$(HOME)/Applications";
+			productName = CalligraphyTouch;
+			productReference = 8D1107320486CEB800E47090 /* CalligraphyTouch.app */;
+			productType = "com.apple.product-type.application";
+		};
+/* End PBXNativeTarget section */
+
+/* Begin PBXProject section */
+		29B97313FDCFA39411CA2CEA /* Project object */ = {
+			isa = PBXProject;
+			attributes = {
+			};
+			buildConfigurationList = C01FCF4E08A954540054247B /* Build configuration list for PBXProject "CalligraphyTouch" */;
+			compatibilityVersion = "Xcode 3.2";
+			developmentRegion = English;
+			hasScannedForEncodings = 1;
+			knownRegions = (
+				English,
+				Japanese,
+				French,
+				German,
+			);
+			mainGroup = 29B97314FDCFA39411CA2CEA /* CalligraphyTouch */;
+			projectDirPath = "";
+			projectRoot = "";
+			targets = (
+				8D1107260486CEB800E47090 /* CalligraphyTouch */,
+			);
+		};
+/* End PBXProject section */
+
+/* Begin PBXResourcesBuildPhase section */
+		8D1107290486CEB800E47090 /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				486E74306C654264BC266C11 /* CinderApp.icns in Resources */,
+				854B2C72197D17360034F07E /* drops in Resources */,
+				854B2C74197D17360034F07E /* videos in Resources */,
+				854B2C71197D17360034F07E /* common in Resources */,
+				854B2C73197D17360034F07E /* shaders in Resources */,
+				854B2C70197D17360034F07E /* brushes in Resources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXResourcesBuildPhase section */
+
+/* Begin PBXSourcesBuildPhase section */
+		8D11072C0486CEB800E47090 /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				4754340106E8457CA967E639 /* CalligraphyTouchApp.cpp in Sources */,
+				854B2C8E197D17450034F07E /* MathUtils.cpp in Sources */,
+				854B2C91197D17450034F07E /* SceneQuat.cpp in Sources */,
+				854B2C98197D17450034F07E /* ViewDrop.cpp in Sources */,
+				4330ECB85F864F5DA3C497A4 /* CinderFreenect.cpp in Sources */,
+				854B2C8F197D17450034F07E /* MeshUtils.cpp in Sources */,
+				FD9C37808B484BE1A8099CB6 /* cameras.c in Sources */,
+				854B2C97197D17450034F07E /* ViewCopy.cpp in Sources */,
+				D3A8D0BAC2D54477A5E49285 /* core.c in Sources */,
+				854B2C92197D17450034F07E /* Utils.cpp in Sources */,
+				854B2C95197D17450034F07E /* InkDrop.cpp in Sources */,
+				854B2C93197D17450034F07E /* View.cpp in Sources */,
+				854B2C96197D17450034F07E /* SceneRibbon.cpp in Sources */,
+				854B2C94197D17450034F07E /* GlobalSettings.cpp in Sources */,
+				854B2C99197D17450034F07E /* ViewRibbon.cpp in Sources */,
+				A62D963F75044CFAA3A2B8AE /* registration.c in Sources */,
+				D69B41FE4A5149B389A8A3A8 /* tilt.c in Sources */,
+				854B2C90197D17450034F07E /* Scene.cpp in Sources */,
+				676D08828FC04FC7B463DF07 /* usb_libusb10.c in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXSourcesBuildPhase section */
+
+/* Begin XCBuildConfiguration section */
+		C01FCF4B08A954540054247B /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				COMBINE_HIDPI_IMAGES = YES;
+				COPY_PHASE_STRIP = NO;
+				DEAD_CODE_STRIPPING = YES;
+				GCC_DYNAMIC_NO_PIC = NO;
+				GCC_INLINES_ARE_PRIVATE_EXTERN = YES;
+				GCC_OPTIMIZATION_LEVEL = 0;
+				GCC_PRECOMPILE_PREFIX_HEADER = YES;
+				GCC_PREFIX_HEADER = CalligraphyTouch_Prefix.pch;
+				GCC_PREPROCESSOR_DEFINITIONS = (
+					"DEBUG=1",
+					"$(inherited)",
+				);
+				GCC_SYMBOLS_PRIVATE_EXTERN = NO;
+				INFOPLIST_FILE = Info.plist;
+				INSTALL_PATH = "$(HOME)/Applications";
+				OTHER_LDFLAGS = (
+					"\"$(CINDER_PATH)/lib/libcinder_d.a\"",
+					"\"../blocks/Cinder-Freenect/lib/macosx/libusb-1.0.a\"",
+				);
+				PRODUCT_NAME = CalligraphyTouch;
+				SYMROOT = ./build;
+				WRAPPER_EXTENSION = app;
+			};
+			name = Debug;
+		};
+		C01FCF4C08A954540054247B /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				COMBINE_HIDPI_IMAGES = YES;
+				DEAD_CODE_STRIPPING = YES;
+				DEBUG_INFORMATION_FORMAT = "dwarf-with-dsym";
+				GCC_FAST_MATH = YES;
+				GCC_GENERATE_DEBUGGING_SYMBOLS = NO;
+				GCC_INLINES_ARE_PRIVATE_EXTERN = YES;
+				GCC_OPTIMIZATION_LEVEL = 3;
+				GCC_PRECOMPILE_PREFIX_HEADER = YES;
+				GCC_PREFIX_HEADER = CalligraphyTouch_Prefix.pch;
+				GCC_SYMBOLS_PRIVATE_EXTERN = NO;
+				INFOPLIST_FILE = Info.plist;
+				INSTALL_PATH = "$(HOME)/Applications";
+				OTHER_LDFLAGS = (
+					"\"$(CINDER_PATH)/lib/libcinder.a\"",
+					"\"../blocks/Cinder-Freenect/lib/macosx/libusb-1.0.a\"",
+				);
+				PRODUCT_NAME = CalligraphyTouch;
+				STRIP_INSTALLED_PRODUCT = YES;
+				SYMROOT = ./build;
+				WRAPPER_EXTENSION = app;
+			};
+			name = Release;
+		};
+		C01FCF4F08A954540054247B /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				ARCHS = i386;
+				CINDER_PATH = ../../../../../../../../Users/yiwenl/Development/Cinder;
+				CLANG_CXX_LANGUAGE_STANDARD = "c++0x";
+				CLANG_CXX_LIBRARY = "libc++";
+				GCC_WARN_ABOUT_RETURN_TYPE = YES;
+				GCC_WARN_UNUSED_VARIABLE = YES;
+				HEADER_SEARCH_PATHS = (
+					"\"$(CINDER_PATH)/boost\"",
+					"\"../blocks/Cinder-Freenect/src/freenect\"",
+				);
+				MACOSX_DEPLOYMENT_TARGET = 10.7;
+				SDKROOT = macosx;
+				USER_HEADER_SEARCH_PATHS = "\"$(CINDER_PATH)/include\" ../include \"../blocks/Cinder-Freenect/src\" ../../../../../../../../Users/yiwenl/Development/Cinder/blocks/QuickTime/include";
+			};
+			name = Debug;
+		};
+		C01FCF5008A954540054247B /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				ARCHS = i386;
+				CINDER_PATH = ../../../../../../../../Users/yiwenl/Development/Cinder;
+				CLANG_CXX_LANGUAGE_STANDARD = "c++0x";
+				CLANG_CXX_LIBRARY = "libc++";
+				GCC_WARN_ABOUT_RETURN_TYPE = YES;
+				GCC_WARN_UNUSED_VARIABLE = YES;
+				HEADER_SEARCH_PATHS = (
+					"\"$(CINDER_PATH)/boost\"",
+					"\"../blocks/Cinder-Freenect/src/freenect\"",
+				);
+				MACOSX_DEPLOYMENT_TARGET = 10.7;
+				SDKROOT = macosx;
+				USER_HEADER_SEARCH_PATHS = "\"$(CINDER_PATH)/include\" ../include \"../blocks/Cinder-Freenect/src\" ../../../../../../../../Users/yiwenl/Development/Cinder/blocks/QuickTime/include";
+			};
+			name = Release;
+		};
+/* End XCBuildConfiguration section */
+
+/* Begin XCConfigurationList section */
+		C01FCF4A08A954540054247B /* Build configuration list for PBXNativeTarget "CalligraphyTouch" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				C01FCF4B08A954540054247B /* Debug */,
+				C01FCF4C08A954540054247B /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		C01FCF4E08A954540054247B /* Build configuration list for PBXProject "CalligraphyTouch" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				C01FCF4F08A954540054247B /* Debug */,
+				C01FCF5008A954540054247B /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+/* End XCConfigurationList section */
+	};
+	rootObject = 29B97313FDCFA39411CA2CEA /* Project object */;
+}
