@@ -1,0 +1,493 @@
+// !$*UTF8*$!
+{
+	archiveVersion = 1;
+	classes = {
+	};
+	objectVersion = 46;
+	objects = {
+
+/* Begin PBXBuildFile section */
+		0091D8F90E81B9330029341E /* OpenGL.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 0091D8F80E81B9330029341E /* OpenGL.framework */; };
+		00B784B30FF439BC000DE1D7 /* Accelerate.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 00B784AF0FF439BC000DE1D7 /* Accelerate.framework */; };
+		00B784B40FF439BC000DE1D7 /* AudioToolbox.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 00B784B00FF439BC000DE1D7 /* AudioToolbox.framework */; };
+		00B784B50FF439BC000DE1D7 /* AudioUnit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 00B784B10FF439BC000DE1D7 /* AudioUnit.framework */; };
+		00B784B60FF439BC000DE1D7 /* CoreAudio.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 00B784B20FF439BC000DE1D7 /* CoreAudio.framework */; };
+		2D7CFEBC36F5428081967D78 /* Calligraphy3DApp.cpp in Sources */ = {isa = PBXBuildFile; fileRef = 66FB17949E874DD4A25EB8E7 /* Calligraphy3DApp.cpp */; };
+		4573A8AFA05E45F994C3B842 /* QuickTime.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 6B3F49C331B842F9BA4B217D /* QuickTime.framework */; };
+		4A4C95FF79B1477AA944DA1C /* CinderApp.icns in Resources */ = {isa = PBXBuildFile; fileRef = E20FEA8534A7404F946C558E /* CinderApp.icns */; };
+		4C08A3690B624E619179144E /* libLeap.dylib in CopyFiles */ = {isa = PBXBuildFile; fileRef = 2E59C2A4E73647A5AE24DF6F /* libLeap.dylib */; };
+		5323E6B20EAFCA74003A9687 /* CoreVideo.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 5323E6B10EAFCA74003A9687 /* CoreVideo.framework */; };
+		5323E6B60EAFCA7E003A9687 /* QTKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 5323E6B50EAFCA7E003A9687 /* QTKit.framework */; };
+		85E4738A197D0EA200576AD4 /* GlobalSettings.cpp in Sources */ = {isa = PBXBuildFile; fileRef = 85E4737E197D0EA200576AD4 /* GlobalSettings.cpp */; };
+		85E4738B197D0EA200576AD4 /* InkDrop.cpp in Sources */ = {isa = PBXBuildFile; fileRef = 85E47380197D0EA200576AD4 /* InkDrop.cpp */; };
+		85E4738C197D0EA200576AD4 /* SceneRibbon.cpp in Sources */ = {isa = PBXBuildFile; fileRef = 85E47382197D0EA200576AD4 /* SceneRibbon.cpp */; };
+		85E4738D197D0EA200576AD4 /* ViewCopy.cpp in Sources */ = {isa = PBXBuildFile; fileRef = 85E47384197D0EA200576AD4 /* ViewCopy.cpp */; };
+		85E4738E197D0EA200576AD4 /* ViewDrop.cpp in Sources */ = {isa = PBXBuildFile; fileRef = 85E47386197D0EA200576AD4 /* ViewDrop.cpp */; };
+		85E4738F197D0EA200576AD4 /* ViewRibbon.cpp in Sources */ = {isa = PBXBuildFile; fileRef = 85E47388197D0EA200576AD4 /* ViewRibbon.cpp */; };
+		85E4739E197D0EC500576AD4 /* MathUtils.cpp in Sources */ = {isa = PBXBuildFile; fileRef = 85E47392197D0EC500576AD4 /* MathUtils.cpp */; };
+		85E4739F197D0EC500576AD4 /* MeshUtils.cpp in Sources */ = {isa = PBXBuildFile; fileRef = 85E47394197D0EC500576AD4 /* MeshUtils.cpp */; };
+		85E473A0197D0EC500576AD4 /* Scene.cpp in Sources */ = {isa = PBXBuildFile; fileRef = 85E47396197D0EC500576AD4 /* Scene.cpp */; };
+		85E473A1197D0EC500576AD4 /* SceneQuat.cpp in Sources */ = {isa = PBXBuildFile; fileRef = 85E47398197D0EC500576AD4 /* SceneQuat.cpp */; };
+		85E473A2197D0EC500576AD4 /* Utils.cpp in Sources */ = {isa = PBXBuildFile; fileRef = 85E4739A197D0EC500576AD4 /* Utils.cpp */; };
+		85E473A3197D0EC500576AD4 /* View.cpp in Sources */ = {isa = PBXBuildFile; fileRef = 85E4739C197D0EC500576AD4 /* View.cpp */; };
+		85E473B3197D0EF900576AD4 /* brushes in Resources */ = {isa = PBXBuildFile; fileRef = 85E473AE197D0EF900576AD4 /* brushes */; };
+		85E473B4197D0EF900576AD4 /* common in Resources */ = {isa = PBXBuildFile; fileRef = 85E473AF197D0EF900576AD4 /* common */; };
+		85E473B5197D0EF900576AD4 /* drops in Resources */ = {isa = PBXBuildFile; fileRef = 85E473B0197D0EF900576AD4 /* drops */; };
+		85E473B6197D0EF900576AD4 /* shaders in Resources */ = {isa = PBXBuildFile; fileRef = 85E473B1197D0EF900576AD4 /* shaders */; };
+		85E473B7197D0EF900576AD4 /* videos in Resources */ = {isa = PBXBuildFile; fileRef = 85E473B2197D0EF900576AD4 /* videos */; };
+		8D11072F0486CEB800E47090 /* Cocoa.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 1058C7A1FEA54F0111CA2CBB /* Cocoa.framework */; };
+		EE30576C6C544460A4ABE061 /* Cinder-LeapMotion.cpp in Sources */ = {isa = PBXBuildFile; fileRef = 44B329372D8D4E109128828D /* Cinder-LeapMotion.cpp */; };
+/* End PBXBuildFile section */
+
+/* Begin PBXCopyFilesBuildPhase section */
+		FA256F38377049299323AF10 /* CopyFiles */ = {
+			isa = PBXCopyFilesBuildPhase;
+			buildActionMask = 2147483647;
+			dstPath = "";
+			dstSubfolderSpec = 6;
+			files = (
+				4C08A3690B624E619179144E /* libLeap.dylib in CopyFiles */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXCopyFilesBuildPhase section */
+
+/* Begin PBXFileReference section */
+		0091D8F80E81B9330029341E /* OpenGL.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = OpenGL.framework; path = /System/Library/Frameworks/OpenGL.framework; sourceTree = "<absolute>"; };
+		00B784AF0FF439BC000DE1D7 /* Accelerate.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Accelerate.framework; path = System/Library/Frameworks/Accelerate.framework; sourceTree = SDKROOT; };
+		00B784B00FF439BC000DE1D7 /* AudioToolbox.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = AudioToolbox.framework; path = System/Library/Frameworks/AudioToolbox.framework; sourceTree = SDKROOT; };
+		00B784B10FF439BC000DE1D7 /* AudioUnit.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = AudioUnit.framework; path = System/Library/Frameworks/AudioUnit.framework; sourceTree = SDKROOT; };
+		00B784B20FF439BC000DE1D7 /* CoreAudio.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = CoreAudio.framework; path = System/Library/Frameworks/CoreAudio.framework; sourceTree = SDKROOT; };
+		1058C7A1FEA54F0111CA2CBB /* Cocoa.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Cocoa.framework; path = /System/Library/Frameworks/Cocoa.framework; sourceTree = "<absolute>"; };
+		1B7918F42EEB453B82DD499D /* Resources.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; name = Resources.h; path = ../include/Resources.h; sourceTree = "<group>"; };
+		29B97324FDCFA39411CA2CEA /* AppKit.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = AppKit.framework; path = /System/Library/Frameworks/AppKit.framework; sourceTree = "<absolute>"; };
+		29B97325FDCFA39411CA2CEA /* Foundation.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Foundation.framework; path = /System/Library/Frameworks/Foundation.framework; sourceTree = "<absolute>"; };
+		2E59C2A4E73647A5AE24DF6F /* libLeap.dylib */ = {isa = PBXFileReference; lastKnownFileType = "compiled.mach-o.dylib"; name = libLeap.dylib; path = ../blocks/LeapMotion/lib/macosx/libLeap.dylib; sourceTree = "<group>"; };
+		44B329372D8D4E109128828D /* Cinder-LeapMotion.cpp */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.cpp; name = "Cinder-LeapMotion.cpp"; path = "../blocks/LeapMotion/src/Cinder-LeapMotion.cpp"; sourceTree = "<group>"; };
+		5323E6B10EAFCA74003A9687 /* CoreVideo.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = CoreVideo.framework; path = /System/Library/Frameworks/CoreVideo.framework; sourceTree = "<absolute>"; };
+		5323E6B50EAFCA7E003A9687 /* QTKit.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = QTKit.framework; path = /System/Library/Frameworks/QTKit.framework; sourceTree = "<absolute>"; };
+		5CF24C414D3C4326A0834030 /* Cinder-LeapMotion.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; name = "Cinder-LeapMotion.h"; path = "../blocks/LeapMotion/src/Cinder-LeapMotion.h"; sourceTree = "<group>"; };
+		66FB17949E874DD4A25EB8E7 /* Calligraphy3DApp.cpp */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.cpp; name = Calligraphy3DApp.cpp; path = ../src/Calligraphy3DApp.cpp; sourceTree = "<group>"; };
+		6B3F49C331B842F9BA4B217D /* QuickTime.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = QuickTime.framework; path = System/Library/Frameworks/QuickTime.framework; sourceTree = SDKROOT; };
+		85E4737E197D0EA200576AD4 /* GlobalSettings.cpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.cpp; name = GlobalSettings.cpp; path = ../src/GlobalSettings.cpp; sourceTree = "<group>"; };
+		85E4737F197D0EA200576AD4 /* GlobalSettings.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = GlobalSettings.h; path = ../src/GlobalSettings.h; sourceTree = "<group>"; };
+		85E47380197D0EA200576AD4 /* InkDrop.cpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.cpp; name = InkDrop.cpp; path = ../src/InkDrop.cpp; sourceTree = "<group>"; };
+		85E47381197D0EA200576AD4 /* InkDrop.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = InkDrop.h; path = ../src/InkDrop.h; sourceTree = "<group>"; };
+		85E47382197D0EA200576AD4 /* SceneRibbon.cpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.cpp; name = SceneRibbon.cpp; path = ../src/SceneRibbon.cpp; sourceTree = "<group>"; };
+		85E47383197D0EA200576AD4 /* SceneRibbon.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = SceneRibbon.h; path = ../src/SceneRibbon.h; sourceTree = "<group>"; };
+		85E47384197D0EA200576AD4 /* ViewCopy.cpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.cpp; name = ViewCopy.cpp; path = ../src/ViewCopy.cpp; sourceTree = "<group>"; };
+		85E47385197D0EA200576AD4 /* ViewCopy.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = ViewCopy.h; path = ../src/ViewCopy.h; sourceTree = "<group>"; };
+		85E47386197D0EA200576AD4 /* ViewDrop.cpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.cpp; name = ViewDrop.cpp; path = ../src/ViewDrop.cpp; sourceTree = "<group>"; };
+		85E47387197D0EA200576AD4 /* ViewDrop.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = ViewDrop.h; path = ../src/ViewDrop.h; sourceTree = "<group>"; };
+		85E47388197D0EA200576AD4 /* ViewRibbon.cpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.cpp; name = ViewRibbon.cpp; path = ../src/ViewRibbon.cpp; sourceTree = "<group>"; };
+		85E47390197D0EAA00576AD4 /* ViewRibbon.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = ViewRibbon.h; path = ../src/ViewRibbon.h; sourceTree = "<group>"; };
+		85E47392197D0EC500576AD4 /* MathUtils.cpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.cpp; path = MathUtils.cpp; sourceTree = "<group>"; };
+		85E47393197D0EC500576AD4 /* MathUtils.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = MathUtils.h; sourceTree = "<group>"; };
+		85E47394197D0EC500576AD4 /* MeshUtils.cpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.cpp; path = MeshUtils.cpp; sourceTree = "<group>"; };
+		85E47395197D0EC500576AD4 /* MeshUtils.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = MeshUtils.h; sourceTree = "<group>"; };
+		85E47396197D0EC500576AD4 /* Scene.cpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.cpp; path = Scene.cpp; sourceTree = "<group>"; };
+		85E47397197D0EC500576AD4 /* Scene.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = Scene.h; sourceTree = "<group>"; };
+		85E47398197D0EC500576AD4 /* SceneQuat.cpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.cpp; path = SceneQuat.cpp; sourceTree = "<group>"; };
+		85E47399197D0EC500576AD4 /* SceneQuat.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = SceneQuat.h; sourceTree = "<group>"; };
+		85E4739A197D0EC500576AD4 /* Utils.cpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.cpp; path = Utils.cpp; sourceTree = "<group>"; };
+		85E4739B197D0EC500576AD4 /* Utils.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = Utils.h; sourceTree = "<group>"; };
+		85E4739C197D0EC500576AD4 /* View.cpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.cpp; path = View.cpp; sourceTree = "<group>"; };
+		85E4739D197D0EC500576AD4 /* View.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = View.h; sourceTree = "<group>"; };
+		85E473AE197D0EF900576AD4 /* brushes */ = {isa = PBXFileReference; lastKnownFileType = folder; name = brushes; path = ../assets/brushes; sourceTree = "<group>"; };
+		85E473AF197D0EF900576AD4 /* common */ = {isa = PBXFileReference; lastKnownFileType = folder; name = common; path = ../assets/common; sourceTree = "<group>"; };
+		85E473B0197D0EF900576AD4 /* drops */ = {isa = PBXFileReference; lastKnownFileType = folder; name = drops; path = ../assets/drops; sourceTree = "<group>"; };
+		85E473B1197D0EF900576AD4 /* shaders */ = {isa = PBXFileReference; lastKnownFileType = folder; name = shaders; path = ../assets/shaders; sourceTree = "<group>"; };
+		85E473B2197D0EF900576AD4 /* videos */ = {isa = PBXFileReference; lastKnownFileType = folder; name = videos; path = ../assets/videos; sourceTree = "<group>"; };
+		8D1107320486CEB800E47090 /* Calligraphy3D.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = Calligraphy3D.app; sourceTree = BUILT_PRODUCTS_DIR; };
+		9BA72B8C0CFC455381D9B6C0 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		A5E19B94CB4549039EE7E25F /* Leap.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; name = Leap.h; path = ../blocks/LeapMotion/src/Leap.h; sourceTree = "<group>"; };
+		D9287F4494084589B084AAB5 /* LeapMath.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; name = LeapMath.h; path = ../blocks/LeapMotion/src/LeapMath.h; sourceTree = "<group>"; };
+		E12A93A235D64FDC91AC7D2C /* Calligraphy3D_Prefix.pch */ = {isa = PBXFileReference; lastKnownFileType = "\"\""; path = Calligraphy3D_Prefix.pch; sourceTree = "<group>"; };
+		E20FEA8534A7404F946C558E /* CinderApp.icns */ = {isa = PBXFileReference; lastKnownFileType = image.icns; name = CinderApp.icns; path = ../resources/CinderApp.icns; sourceTree = "<group>"; };
+/* End PBXFileReference section */
+
+/* Begin PBXFrameworksBuildPhase section */
+		8D11072E0486CEB800E47090 /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				8D11072F0486CEB800E47090 /* Cocoa.framework in Frameworks */,
+				0091D8F90E81B9330029341E /* OpenGL.framework in Frameworks */,
+				5323E6B20EAFCA74003A9687 /* CoreVideo.framework in Frameworks */,
+				5323E6B60EAFCA7E003A9687 /* QTKit.framework in Frameworks */,
+				00B784B30FF439BC000DE1D7 /* Accelerate.framework in Frameworks */,
+				00B784B40FF439BC000DE1D7 /* AudioToolbox.framework in Frameworks */,
+				00B784B50FF439BC000DE1D7 /* AudioUnit.framework in Frameworks */,
+				00B784B60FF439BC000DE1D7 /* CoreAudio.framework in Frameworks */,
+				4573A8AFA05E45F994C3B842 /* QuickTime.framework in Frameworks */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXFrameworksBuildPhase section */
+
+/* Begin PBXGroup section */
+		01B97315FEAEA392516A2CEA /* Blocks */ = {
+			isa = PBXGroup;
+			children = (
+				D0275CD43D62463CA4901876 /* LeapMotion */,
+			);
+			name = Blocks;
+			sourceTree = "<group>";
+		};
+		080E96DDFE201D6D7F000001 /* Source */ = {
+			isa = PBXGroup;
+			children = (
+				85E47391197D0EC500576AD4 /* bongiovi */,
+				85E4737E197D0EA200576AD4 /* GlobalSettings.cpp */,
+				85E47380197D0EA200576AD4 /* InkDrop.cpp */,
+				85E47382197D0EA200576AD4 /* SceneRibbon.cpp */,
+				85E47384197D0EA200576AD4 /* ViewCopy.cpp */,
+				85E47386197D0EA200576AD4 /* ViewDrop.cpp */,
+				85E47388197D0EA200576AD4 /* ViewRibbon.cpp */,
+				66FB17949E874DD4A25EB8E7 /* Calligraphy3DApp.cpp */,
+			);
+			name = Source;
+			sourceTree = "<group>";
+		};
+		086F80E32C9E4D7FA2ACB8B5 /* macosx */ = {
+			isa = PBXGroup;
+			children = (
+				2E59C2A4E73647A5AE24DF6F /* libLeap.dylib */,
+			);
+			name = macosx;
+			sourceTree = "<group>";
+		};
+		0F27B86B22B34497B9904AA0 /* lib */ = {
+			isa = PBXGroup;
+			children = (
+				086F80E32C9E4D7FA2ACB8B5 /* macosx */,
+			);
+			name = lib;
+			sourceTree = "<group>";
+		};
+		1058C7A0FEA54F0111CA2CBB /* Linked Frameworks */ = {
+			isa = PBXGroup;
+			children = (
+				00B784AF0FF439BC000DE1D7 /* Accelerate.framework */,
+				00B784B00FF439BC000DE1D7 /* AudioToolbox.framework */,
+				00B784B10FF439BC000DE1D7 /* AudioUnit.framework */,
+				00B784B20FF439BC000DE1D7 /* CoreAudio.framework */,
+				5323E6B50EAFCA7E003A9687 /* QTKit.framework */,
+				5323E6B10EAFCA74003A9687 /* CoreVideo.framework */,
+				0091D8F80E81B9330029341E /* OpenGL.framework */,
+				1058C7A1FEA54F0111CA2CBB /* Cocoa.framework */,
+			);
+			name = "Linked Frameworks";
+			sourceTree = "<group>";
+		};
+		1058C7A2FEA54F0111CA2CBB /* Other Frameworks */ = {
+			isa = PBXGroup;
+			children = (
+				29B97324FDCFA39411CA2CEA /* AppKit.framework */,
+				29B97325FDCFA39411CA2CEA /* Foundation.framework */,
+			);
+			name = "Other Frameworks";
+			sourceTree = "<group>";
+		};
+		19C28FACFE9D520D11CA2CBB /* Products */ = {
+			isa = PBXGroup;
+			children = (
+				8D1107320486CEB800E47090 /* Calligraphy3D.app */,
+			);
+			name = Products;
+			sourceTree = "<group>";
+		};
+		29B97314FDCFA39411CA2CEA /* Calligraphy3D */ = {
+			isa = PBXGroup;
+			children = (
+				01B97315FEAEA392516A2CEA /* Blocks */,
+				29B97315FDCFA39411CA2CEA /* Headers */,
+				080E96DDFE201D6D7F000001 /* Source */,
+				29B97317FDCFA39411CA2CEA /* Resources */,
+				29B97323FDCFA39411CA2CEA /* Frameworks */,
+				19C28FACFE9D520D11CA2CBB /* Products */,
+			);
+			name = Calligraphy3D;
+			sourceTree = "<group>";
+		};
+		29B97315FDCFA39411CA2CEA /* Headers */ = {
+			isa = PBXGroup;
+			children = (
+				85E47390197D0EAA00576AD4 /* ViewRibbon.h */,
+				85E4737F197D0EA200576AD4 /* GlobalSettings.h */,
+				85E47381197D0EA200576AD4 /* InkDrop.h */,
+				85E47383197D0EA200576AD4 /* SceneRibbon.h */,
+				85E47385197D0EA200576AD4 /* ViewCopy.h */,
+				85E47387197D0EA200576AD4 /* ViewDrop.h */,
+				1B7918F42EEB453B82DD499D /* Resources.h */,
+				E12A93A235D64FDC91AC7D2C /* Calligraphy3D_Prefix.pch */,
+			);
+			name = Headers;
+			sourceTree = "<group>";
+		};
+		29B97317FDCFA39411CA2CEA /* Resources */ = {
+			isa = PBXGroup;
+			children = (
+				85E473AE197D0EF900576AD4 /* brushes */,
+				85E473AF197D0EF900576AD4 /* common */,
+				85E473B0197D0EF900576AD4 /* drops */,
+				85E473B1197D0EF900576AD4 /* shaders */,
+				85E473B2197D0EF900576AD4 /* videos */,
+				E20FEA8534A7404F946C558E /* CinderApp.icns */,
+				9BA72B8C0CFC455381D9B6C0 /* Info.plist */,
+			);
+			name = Resources;
+			sourceTree = "<group>";
+		};
+		29B97323FDCFA39411CA2CEA /* Frameworks */ = {
+			isa = PBXGroup;
+			children = (
+				1058C7A0FEA54F0111CA2CBB /* Linked Frameworks */,
+				1058C7A2FEA54F0111CA2CBB /* Other Frameworks */,
+				6B3F49C331B842F9BA4B217D /* QuickTime.framework */,
+			);
+			name = Frameworks;
+			sourceTree = "<group>";
+		};
+		7034886242F54C9C9F068120 /* src */ = {
+			isa = PBXGroup;
+			children = (
+				44B329372D8D4E109128828D /* Cinder-LeapMotion.cpp */,
+				5CF24C414D3C4326A0834030 /* Cinder-LeapMotion.h */,
+				A5E19B94CB4549039EE7E25F /* Leap.h */,
+				D9287F4494084589B084AAB5 /* LeapMath.h */,
+			);
+			name = src;
+			sourceTree = "<group>";
+		};
+		85E47391197D0EC500576AD4 /* bongiovi */ = {
+			isa = PBXGroup;
+			children = (
+				85E47392197D0EC500576AD4 /* MathUtils.cpp */,
+				85E47393197D0EC500576AD4 /* MathUtils.h */,
+				85E47394197D0EC500576AD4 /* MeshUtils.cpp */,
+				85E47395197D0EC500576AD4 /* MeshUtils.h */,
+				85E47396197D0EC500576AD4 /* Scene.cpp */,
+				85E47397197D0EC500576AD4 /* Scene.h */,
+				85E47398197D0EC500576AD4 /* SceneQuat.cpp */,
+				85E47399197D0EC500576AD4 /* SceneQuat.h */,
+				85E4739A197D0EC500576AD4 /* Utils.cpp */,
+				85E4739B197D0EC500576AD4 /* Utils.h */,
+				85E4739C197D0EC500576AD4 /* View.cpp */,
+				85E4739D197D0EC500576AD4 /* View.h */,
+			);
+			name = bongiovi;
+			path = ../src/bongiovi;
+			sourceTree = "<group>";
+		};
+		D0275CD43D62463CA4901876 /* LeapMotion */ = {
+			isa = PBXGroup;
+			children = (
+				7034886242F54C9C9F068120 /* src */,
+				0F27B86B22B34497B9904AA0 /* lib */,
+			);
+			name = LeapMotion;
+			sourceTree = "<group>";
+		};
+/* End PBXGroup section */
+
+/* Begin PBXNativeTarget section */
+		8D1107260486CEB800E47090 /* Calligraphy3D */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = C01FCF4A08A954540054247B /* Build configuration list for PBXNativeTarget "Calligraphy3D" */;
+			buildPhases = (
+				8D1107290486CEB800E47090 /* Resources */,
+				8D11072C0486CEB800E47090 /* Sources */,
+				8D11072E0486CEB800E47090 /* Frameworks */,
+				FA256F38377049299323AF10 /* CopyFiles */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+			);
+			name = Calligraphy3D;
+			productInstallPath = "$(HOME)/Applications";
+			productName = Calligraphy3D;
+			productReference = 8D1107320486CEB800E47090 /* Calligraphy3D.app */;
+			productType = "com.apple.product-type.application";
+		};
+/* End PBXNativeTarget section */
+
+/* Begin PBXProject section */
+		29B97313FDCFA39411CA2CEA /* Project object */ = {
+			isa = PBXProject;
+			attributes = {
+			};
+			buildConfigurationList = C01FCF4E08A954540054247B /* Build configuration list for PBXProject "Calligraphy3D" */;
+			compatibilityVersion = "Xcode 3.2";
+			developmentRegion = English;
+			hasScannedForEncodings = 1;
+			knownRegions = (
+				English,
+				Japanese,
+				French,
+				German,
+			);
+			mainGroup = 29B97314FDCFA39411CA2CEA /* Calligraphy3D */;
+			projectDirPath = "";
+			projectRoot = "";
+			targets = (
+				8D1107260486CEB800E47090 /* Calligraphy3D */,
+			);
+		};
+/* End PBXProject section */
+
+/* Begin PBXResourcesBuildPhase section */
+		8D1107290486CEB800E47090 /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				4A4C95FF79B1477AA944DA1C /* CinderApp.icns in Resources */,
+				85E473B6197D0EF900576AD4 /* shaders in Resources */,
+				85E473B3197D0EF900576AD4 /* brushes in Resources */,
+				85E473B5197D0EF900576AD4 /* drops in Resources */,
+				85E473B7197D0EF900576AD4 /* videos in Resources */,
+				85E473B4197D0EF900576AD4 /* common in Resources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXResourcesBuildPhase section */
+
+/* Begin PBXSourcesBuildPhase section */
+		8D11072C0486CEB800E47090 /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				85E473A3197D0EC500576AD4 /* View.cpp in Sources */,
+				85E4739F197D0EC500576AD4 /* MeshUtils.cpp in Sources */,
+				85E4739E197D0EC500576AD4 /* MathUtils.cpp in Sources */,
+				85E4738E197D0EA200576AD4 /* ViewDrop.cpp in Sources */,
+				85E4738A197D0EA200576AD4 /* GlobalSettings.cpp in Sources */,
+				85E4738D197D0EA200576AD4 /* ViewCopy.cpp in Sources */,
+				2D7CFEBC36F5428081967D78 /* Calligraphy3DApp.cpp in Sources */,
+				85E473A0197D0EC500576AD4 /* Scene.cpp in Sources */,
+				85E473A1197D0EC500576AD4 /* SceneQuat.cpp in Sources */,
+				EE30576C6C544460A4ABE061 /* Cinder-LeapMotion.cpp in Sources */,
+				85E473A2197D0EC500576AD4 /* Utils.cpp in Sources */,
+				85E4738B197D0EA200576AD4 /* InkDrop.cpp in Sources */,
+				85E4738F197D0EA200576AD4 /* ViewRibbon.cpp in Sources */,
+				85E4738C197D0EA200576AD4 /* SceneRibbon.cpp in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXSourcesBuildPhase section */
+
+/* Begin XCBuildConfiguration section */
+		C01FCF4B08A954540054247B /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				COMBINE_HIDPI_IMAGES = YES;
+				COPY_PHASE_STRIP = NO;
+				DEAD_CODE_STRIPPING = YES;
+				GCC_DYNAMIC_NO_PIC = NO;
+				GCC_INLINES_ARE_PRIVATE_EXTERN = YES;
+				GCC_OPTIMIZATION_LEVEL = 0;
+				GCC_PRECOMPILE_PREFIX_HEADER = YES;
+				GCC_PREFIX_HEADER = Calligraphy3D_Prefix.pch;
+				GCC_PREPROCESSOR_DEFINITIONS = (
+					"DEBUG=1",
+					"$(inherited)",
+				);
+				GCC_SYMBOLS_PRIVATE_EXTERN = NO;
+				INFOPLIST_FILE = Info.plist;
+				INSTALL_PATH = "$(HOME)/Applications";
+				OTHER_LDFLAGS = (
+					"\"$(CINDER_PATH)/lib/libcinder_d.a\"",
+					../blocks/LeapMotion/lib/macosx/libLeap.dylib,
+				);
+				PRODUCT_NAME = Calligraphy3D;
+				SYMROOT = ./build;
+				WRAPPER_EXTENSION = app;
+			};
+			name = Debug;
+		};
+		C01FCF4C08A954540054247B /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				COMBINE_HIDPI_IMAGES = YES;
+				DEAD_CODE_STRIPPING = YES;
+				DEBUG_INFORMATION_FORMAT = "dwarf-with-dsym";
+				GCC_FAST_MATH = YES;
+				GCC_GENERATE_DEBUGGING_SYMBOLS = NO;
+				GCC_INLINES_ARE_PRIVATE_EXTERN = YES;
+				GCC_OPTIMIZATION_LEVEL = 3;
+				GCC_PRECOMPILE_PREFIX_HEADER = YES;
+				GCC_PREFIX_HEADER = Calligraphy3D_Prefix.pch;
+				GCC_SYMBOLS_PRIVATE_EXTERN = NO;
+				INFOPLIST_FILE = Info.plist;
+				INSTALL_PATH = "$(HOME)/Applications";
+				OTHER_LDFLAGS = (
+					"\"$(CINDER_PATH)/lib/libcinder.a\"",
+					../blocks/LeapMotion/lib/macosx/libLeap.dylib,
+				);
+				PRODUCT_NAME = Calligraphy3D;
+				STRIP_INSTALLED_PRODUCT = YES;
+				SYMROOT = ./build;
+				WRAPPER_EXTENSION = app;
+			};
+			name = Release;
+		};
+		C01FCF4F08A954540054247B /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				ARCHS = i386;
+				CINDER_PATH = ../../../../../../../../Users/yiwenl/Development/Cinder;
+				CLANG_CXX_LANGUAGE_STANDARD = "c++0x";
+				CLANG_CXX_LIBRARY = "libc++";
+				GCC_WARN_ABOUT_RETURN_TYPE = YES;
+				GCC_WARN_UNUSED_VARIABLE = YES;
+				HEADER_SEARCH_PATHS = "\"$(CINDER_PATH)/boost\"";
+				MACOSX_DEPLOYMENT_TARGET = 10.7;
+				SDKROOT = macosx;
+				USER_HEADER_SEARCH_PATHS = "\"$(CINDER_PATH)/include\" ../include ../blocks/LeapMotion/src ../blocks/QuickTime/include";
+			};
+			name = Debug;
+		};
+		C01FCF5008A954540054247B /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				ARCHS = i386;
+				CINDER_PATH = ../../../../../../../../Users/yiwenl/Development/Cinder;
+				CLANG_CXX_LANGUAGE_STANDARD = "c++0x";
+				CLANG_CXX_LIBRARY = "libc++";
+				GCC_WARN_ABOUT_RETURN_TYPE = YES;
+				GCC_WARN_UNUSED_VARIABLE = YES;
+				HEADER_SEARCH_PATHS = "\"$(CINDER_PATH)/boost\"";
+				MACOSX_DEPLOYMENT_TARGET = 10.7;
+				SDKROOT = macosx;
+				USER_HEADER_SEARCH_PATHS = "\"$(CINDER_PATH)/include\" ../include ../blocks/LeapMotion/src ../blocks/QuickTime/include";
+			};
+			name = Release;
+		};
+/* End XCBuildConfiguration section */
+
+/* Begin XCConfigurationList section */
+		C01FCF4A08A954540054247B /* Build configuration list for PBXNativeTarget "Calligraphy3D" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				C01FCF4B08A954540054247B /* Debug */,
+				C01FCF4C08A954540054247B /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		C01FCF4E08A954540054247B /* Build configuration list for PBXProject "Calligraphy3D" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				C01FCF4F08A954540054247B /* Debug */,
+				C01FCF5008A954540054247B /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+/* End XCConfigurationList section */
+	};
+	rootObject = 29B97313FDCFA39411CA2CEA /* Project object */;
+}

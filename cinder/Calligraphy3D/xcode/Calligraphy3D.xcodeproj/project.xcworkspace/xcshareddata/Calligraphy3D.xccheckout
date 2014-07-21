@@ -1,0 +1,41 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE plist PUBLIC "-//Apple//DTD PLIST 1.0//EN" "http://www.apple.com/DTDs/PropertyList-1.0.dtd">
+<plist version="1.0">
+<dict>
+	<key>IDESourceControlProjectFavoriteDictionaryKey</key>
+	<false/>
+	<key>IDESourceControlProjectIdentifier</key>
+	<string>77D79E99-D3B7-4C14-8BE2-27511B90A804</string>
+	<key>IDESourceControlProjectName</key>
+	<string>Calligraphy3D</string>
+	<key>IDESourceControlProjectOriginsDictionary</key>
+	<dict>
+		<key>EF43E0F8-DD10-4133-BFAC-7D1D3455667E</key>
+		<string>https://github.com/yiwenl/rtbc_2014.git</string>
+	</dict>
+	<key>IDESourceControlProjectPath</key>
+	<string>cinder/Calligraphy3D/xcode/Calligraphy3D.xcodeproj/project.xcworkspace</string>
+	<key>IDESourceControlProjectRelativeInstallPathDictionary</key>
+	<dict>
+		<key>EF43E0F8-DD10-4133-BFAC-7D1D3455667E</key>
+		<string>../../../../..</string>
+	</dict>
+	<key>IDESourceControlProjectURL</key>
+	<string>https://github.com/yiwenl/rtbc_2014.git</string>
+	<key>IDESourceControlProjectVersion</key>
+	<integer>110</integer>
+	<key>IDESourceControlProjectWCCIdentifier</key>
+	<string>EF43E0F8-DD10-4133-BFAC-7D1D3455667E</string>
+	<key>IDESourceControlProjectWCConfigurations</key>
+	<array>
+		<dict>
+			<key>IDESourceControlRepositoryExtensionIdentifierKey</key>
+			<string>public.vcs.git</string>
+			<key>IDESourceControlWCCIdentifierKey</key>
+			<string>EF43E0F8-DD10-4133-BFAC-7D1D3455667E</string>
+			<key>IDESourceControlWCCName</key>
+			<string>RTBC</string>
+		</dict>
+	</array>
+</dict>
+</plist>
