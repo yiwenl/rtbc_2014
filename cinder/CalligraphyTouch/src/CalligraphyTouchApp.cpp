@@ -57,10 +57,10 @@ void CalligraphyTouchApp::setup() {
     
     
     //  MIP MAPPING
-    glTexGeni(GL_S, GL_TEXTURE_GEN_MODE, GL_SPHERE_MAP);
-    glTexGeni(GL_T, GL_TEXTURE_GEN_MODE, GL_SPHERE_MAP);
-    glEnable(GL_TEXTURE_GEN_S);
-    glEnable(GL_TEXTURE_GEN_T);
+//    glTexGeni(GL_S, GL_TEXTURE_GEN_MODE, GL_SPHERE_MAP);
+//    glTexGeni(GL_T, GL_TEXTURE_GEN_MODE, GL_SPHERE_MAP);
+//    glEnable(GL_TEXTURE_GEN_S);
+//    glEnable(GL_TEXTURE_GEN_T);
     
     gl::Texture::Format format;
     format.enableMipmapping( true );
@@ -78,6 +78,7 @@ void CalligraphyTouchApp::setup() {
     _params->addParam( "Ribbon Width",              &GlobalSettings::getInstance().ribbonWidth, "min=0.0 max=100. step=1.0");
     _params->addParam( "Leap Motion Offset",        &GlobalSettings::getInstance().leapMotionOffset, "min=0.0 max=5.0. step=0.1");
     _params->addParam( "Is Flatten",                &GlobalSettings::getInstance().isFlatten);
+    _params->addParam( "Is In Dark",                &GlobalSettings::getInstance().isInDark);
     
 }
 
@@ -215,7 +216,7 @@ void CalligraphyTouchApp::mouseDrag( MouseEvent event ) {
             _needReset = true;
             
             if(rand()%100 > 90) {
-                InkDrop* ink = new InkDrop(pos, rand()%6, MathUtils::random(100, 200) );
+                InkDrop* ink = new InkDrop(pos, rand()%6, MathUtils::random(150, 250) );
                 GlobalSettings::getInstance().inkDrops.push_back(ink);
             }
         }
@@ -242,6 +243,8 @@ void CalligraphyTouchApp::keyDown( KeyEvent event ) {
     } else if(event.getChar() == 'h') {
         if(_params->isVisible()) _params->hide();
         else _params->show();
+    } else if(event.getChar() == 's') {
+        GlobalSettings::getInstance().isInDark = !GlobalSettings::getInstance().isInDark;
     }
 }
 

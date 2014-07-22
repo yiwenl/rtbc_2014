@@ -33,6 +33,7 @@ class GlobalSettings {
     float   fps                         = 0;
     float   ribbonWidth                 = 30.0f;
     bool    isFlatten                   = false;
+    bool    isInDark                    = false;
     
     
     vector<Vec3f>       points;

@@ -31,8 +31,9 @@ class GlobalSettings {
     float   minPointDistance            = 40;
     
     float   fps                         = 0;
-    float   ribbonWidth                 = 20.0f;
+    float   ribbonWidth                 = 30.0f;
     bool    isFlatten                   = false;
+    bool    isInDark                    = false;
     
     
     vector<Vec3f>       points;

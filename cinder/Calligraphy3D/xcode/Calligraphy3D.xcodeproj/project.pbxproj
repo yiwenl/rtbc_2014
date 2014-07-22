@@ -18,6 +18,7 @@
 		4C08A3690B624E619179144E /* libLeap.dylib in CopyFiles */ = {isa = PBXBuildFile; fileRef = 2E59C2A4E73647A5AE24DF6F /* libLeap.dylib */; };
 		5323E6B20EAFCA74003A9687 /* CoreVideo.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 5323E6B10EAFCA74003A9687 /* CoreVideo.framework */; };
 		5323E6B60EAFCA7E003A9687 /* QTKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 5323E6B50EAFCA7E003A9687 /* QTKit.framework */; };
+		8535AD51197EEF2300E6005B /* ViewPost.cpp in Sources */ = {isa = PBXBuildFile; fileRef = 8535AD4F197EEF2300E6005B /* ViewPost.cpp */; };
 		85E4738A197D0EA200576AD4 /* GlobalSettings.cpp in Sources */ = {isa = PBXBuildFile; fileRef = 85E4737E197D0EA200576AD4 /* GlobalSettings.cpp */; };
 		85E4738B197D0EA200576AD4 /* InkDrop.cpp in Sources */ = {isa = PBXBuildFile; fileRef = 85E47380197D0EA200576AD4 /* InkDrop.cpp */; };
 		85E4738C197D0EA200576AD4 /* SceneRibbon.cpp in Sources */ = {isa = PBXBuildFile; fileRef = 85E47382197D0EA200576AD4 /* SceneRibbon.cpp */; };
@@ -69,6 +70,8 @@
 		5CF24C414D3C4326A0834030 /* Cinder-LeapMotion.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; name = "Cinder-LeapMotion.h"; path = "../blocks/LeapMotion/src/Cinder-LeapMotion.h"; sourceTree = "<group>"; };
 		66FB17949E874DD4A25EB8E7 /* Calligraphy3DApp.cpp */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.cpp; name = Calligraphy3DApp.cpp; path = ../src/Calligraphy3DApp.cpp; sourceTree = "<group>"; };
 		6B3F49C331B842F9BA4B217D /* QuickTime.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = QuickTime.framework; path = System/Library/Frameworks/QuickTime.framework; sourceTree = SDKROOT; };
+		8535AD4F197EEF2300E6005B /* ViewPost.cpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.cpp; name = ViewPost.cpp; path = ../src/ViewPost.cpp; sourceTree = "<group>"; };
+		8535AD50197EEF2300E6005B /* ViewPost.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = ViewPost.h; path = ../src/ViewPost.h; sourceTree = "<group>"; };
 		85E4737E197D0EA200576AD4 /* GlobalSettings.cpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.cpp; name = GlobalSettings.cpp; path = ../src/GlobalSettings.cpp; sourceTree = "<group>"; };
 		85E4737F197D0EA200576AD4 /* GlobalSettings.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = GlobalSettings.h; path = ../src/GlobalSettings.h; sourceTree = "<group>"; };
 		85E47380197D0EA200576AD4 /* InkDrop.cpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.cpp; name = InkDrop.cpp; path = ../src/InkDrop.cpp; sourceTree = "<group>"; };
@@ -137,14 +140,12 @@
 		080E96DDFE201D6D7F000001 /* Source */ = {
 			isa = PBXGroup;
 			children = (
-				85E47391197D0EC500576AD4 /* bongiovi */,
+				66FB17949E874DD4A25EB8E7 /* Calligraphy3DApp.cpp */,
 				85E4737E197D0EA200576AD4 /* GlobalSettings.cpp */,
 				85E47380197D0EA200576AD4 /* InkDrop.cpp */,
 				85E47382197D0EA200576AD4 /* SceneRibbon.cpp */,
-				85E47384197D0EA200576AD4 /* ViewCopy.cpp */,
-				85E47386197D0EA200576AD4 /* ViewDrop.cpp */,
-				85E47388197D0EA200576AD4 /* ViewRibbon.cpp */,
-				66FB17949E874DD4A25EB8E7 /* Calligraphy3DApp.cpp */,
+				8535AD52197EEF3B00E6005B /* views */,
+				85E47391197D0EC500576AD4 /* bongiovi */,
 			);
 			name = Source;
 			sourceTree = "<group>";
@@ -220,6 +221,7 @@
 				85E47385197D0EA200576AD4 /* ViewCopy.h */,
 				85E47387197D0EA200576AD4 /* ViewDrop.h */,
 				1B7918F42EEB453B82DD499D /* Resources.h */,
+				8535AD50197EEF2300E6005B /* ViewPost.h */,
 				E12A93A235D64FDC91AC7D2C /* Calligraphy3D_Prefix.pch */,
 			);
 			name = Headers;
@@ -258,6 +260,17 @@
 				D9287F4494084589B084AAB5 /* LeapMath.h */,
 			);
 			name = src;
+			sourceTree = "<group>";
+		};
+		8535AD52197EEF3B00E6005B /* views */ = {
+			isa = PBXGroup;
+			children = (
+				8535AD4F197EEF2300E6005B /* ViewPost.cpp */,
+				85E47384197D0EA200576AD4 /* ViewCopy.cpp */,
+				85E47386197D0EA200576AD4 /* ViewDrop.cpp */,
+				85E47388197D0EA200576AD4 /* ViewRibbon.cpp */,
+			);
+			name = views;
 			sourceTree = "<group>";
 		};
 		85E47391197D0EC500576AD4 /* bongiovi */ = {
@@ -361,6 +374,7 @@
 				85E473A3197D0EC500576AD4 /* View.cpp in Sources */,
 				85E4739F197D0EC500576AD4 /* MeshUtils.cpp in Sources */,
 				85E4739E197D0EC500576AD4 /* MathUtils.cpp in Sources */,
+				8535AD51197EEF2300E6005B /* ViewPost.cpp in Sources */,
 				85E4738E197D0EA200576AD4 /* ViewDrop.cpp in Sources */,
 				85E4738A197D0EA200576AD4 /* GlobalSettings.cpp in Sources */,
 				85E4738D197D0EA200576AD4 /* ViewCopy.cpp in Sources */,

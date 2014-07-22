@@ -7,7 +7,7 @@
 //
 
 #include "ViewDrop.h"
-
+#include "GlobalSettings.h"
 
 ViewDrop::ViewDrop() : View("shaders/drop.vert", "shaders/drop.frag"){
     _init();
@@ -66,6 +66,8 @@ void ViewDrop::render(InkDrop* ink, gl::TextureRef texture) {
     shader->uniform("location", ink->loc);
     shader->uniform("uvGap", ink->uvGap);
     shader->uniform("uvOffset", uvOffset);
+    shader->uniform("isInDark", GlobalSettings::getInstance().isInDark);
+    shader->uniform("rotation", ink->rotation);
     texture->bind();
     gl::draw(mesh);
     texture->unbind();
@@ -81,6 +83,7 @@ void ViewDrop::render() {
     shader->bind();
     shader->uniform("texture", 0);
     shader->uniform("uvOffset", uvOffset);
+    shader->uniform("isInDark", GlobalSettings::getInstance().isInDark);
     _texture->bind();
     gl::draw(mesh);
     _texture->unbind();

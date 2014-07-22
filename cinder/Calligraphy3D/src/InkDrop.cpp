@@ -7,7 +7,9 @@
 //
 
 #include "InkDrop.h"
+#include "MathUtils.h"
 
+using namespace bongiovi::utils;
 
 static int UVS[6]{4, 5, 5, 4, 5, 4};
 
@@ -19,6 +21,7 @@ InkDrop::InkDrop(Vec3f _loc, int index, float _size) {
     uvGap           = 1.0f / gap;
     totalFrames     = gap * gap;
     size            = _size;
+    rotation        = MathUtils::random(M_PI * 2);
 }
 
 

@@ -13,11 +13,11 @@
 using namespace ci;
 using namespace std;
 
-ViewRibbon::ViewRibbon() : View("shaders/copy.vert", "shaders/copy.frag") {
+ViewRibbon::ViewRibbon() : View("shaders/copy.vert", "shaders/strokes.frag") {
     _init();
 }
 
-ViewRibbon::ViewRibbon(int index) : View("shaders/copy.vert", "shaders/copy.frag") {
+ViewRibbon::ViewRibbon(int index) : View("shaders/copy.vert", "shaders/strokes.frag") {
     textureIndex = index;
     _init();
 }
@@ -86,6 +86,7 @@ void ViewRibbon::render(gl::TextureRef texture) {
     if(!mesh) return;
     shader->bind();
     shader->uniform("texture", 0);
+    shader->uniform("isInDark", GlobalSettings::getInstance().isInDark);
     texture->bind();
     gl::draw(mesh);
     texture->unbind();

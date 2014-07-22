@@ -104,7 +104,7 @@ void SceneRibbon::clearAll() {
 
 void SceneRibbon::render() {
     gl::setMatrices(*_cameraOrtho);
-    _vBg->render(_texBg);
+    _vBg->render(GlobalSettings::getInstance().isInDark ? _texBgDark : _texBg);
     
     Area viewport = gl::getViewport();
     

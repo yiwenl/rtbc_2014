@@ -98,8 +98,7 @@ void Calligraphy3DApp::onFrame(Leap::Frame frame) {
                 _points.push_back(pos);
                 _needReset = true;
                 
-                if(rand()%100 > 95) {
-                    cout << " Add Ink Drop : " << endl;
+                if(rand()%100 > 90) {
                     InkDrop* ink = new InkDrop(pos, rand()%6, MathUtils::random(50, 100) );
                     GlobalSettings::getInstance().inkDrops.push_back(ink);
                 }
@@ -214,6 +213,9 @@ void Calligraphy3DApp::mouseDown( MouseEvent event ) { }
 void Calligraphy3DApp::keyDown( KeyEvent event ) {
     if(event.getChar() == 'c' ) {
         clear();
+        _scene->clearAll();
+        GlobalSettings::getInstance().inkDrops.empty();
+        GlobalSettings::getInstance().inkDrops.clear();
     } else if(event.getChar() == ' ') {
         if(!_isRecording) {
             _isRecording = true;
@@ -224,6 +226,11 @@ void Calligraphy3DApp::keyDown( KeyEvent event ) {
         _scene->updateBrush();
     } else if(event.getChar() == 'f') {
         setFullScreen(!isFullScreen());
+    } else if(event.getChar() == 'h') {
+        if(_params->isVisible()) _params->hide();
+        else _params->show();
+    } else if(event.getChar() == 's') {
+        GlobalSettings::getInstance().isInDark = !GlobalSettings::getInstance().isInDark;
     }
 }
 
