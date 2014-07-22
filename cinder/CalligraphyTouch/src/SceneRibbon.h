@@ -11,6 +11,7 @@
 
 #include <iostream>
 
+#include "cinder/qtime/QuickTime.h"
 #include "cinder/gl/Texture.h"
 #include "cinder/gl/Fbo.h"
 #include "cinder/Camera.h"
@@ -18,6 +19,7 @@
 #include "ViewCopy.h"
 #include "ViewRibbon.h"
 #include "ViewDrop.h"
+#include "ViewPost.h"
 
 using namespace bongiovi;
 using namespace ci;
@@ -39,17 +41,20 @@ private:
     void                    _initTextures();
     void                    _initViews();
     
+    qtime::MovieGl          _movie;
     CameraOrtho*            _cameraStage;
     gl::TextureRef          _texBg;
     gl::TextureRef          _texBgDark;
     gl::TextureRef          _texBrush;
     gl::TextureRef          _texDrop;
+    gl::Fbo*                _strokes;
     
     vector<gl::TextureRef>  _brushes;
     vector<gl::TextureRef>  _drops;
     
     
     ViewCopy*               _vBg;
+    ViewPost*               _vPost;
     ViewRibbon*             _vRibbon;
     ViewDrop*               _vDrop;
     

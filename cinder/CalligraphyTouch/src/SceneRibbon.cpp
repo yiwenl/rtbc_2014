@@ -30,6 +30,22 @@ void SceneRibbon::_initTextures() {
     _texBgDark      = Utils::createTexture("common/floorBlue.jpg");
     _texDrop        = Utils::createTexture("drops/drop01.png");
     
+    _movie = qtime::MovieGl( cinder::app::loadResource("videos/bw.mp4"));
+    _movie.setLoop();
+    _movie.play();
+    
+    gl::Fbo::Format format;
+    format.enableColorBuffer( true, 2 );
+    format.setColorInternalFormat( GL_RGBA32F_ARB );
+    format.setMinFilter(GL_LINEAR);
+    format.setMagFilter(GL_LINEAR);
+    
+    int size        = 1024;
+    _strokes        = new gl::Fbo(size*2, size, format);
+    _strokes->bindFramebuffer();
+    gl::clear();
+    _strokes->unbindFramebuffer();
+    
     gl::TextureRef brush0 = Utils::createTexture("brushes/brush0.png");
     gl::TextureRef brush1 = Utils::createTexture("brushes/brush1.png");
     gl::TextureRef brush2 = Utils::createTexture("brushes/brush2.png");
@@ -52,6 +68,7 @@ void SceneRibbon::_initTextures() {
 
 void SceneRibbon::_initViews() {
     _vBg            = new ViewCopy();
+    _vPost          = new ViewPost();
     _vDrop          = new ViewDrop();
 }
 
@@ -89,11 +106,12 @@ void SceneRibbon::render() {
     gl::setMatrices(*_cameraOrtho);
     _vBg->render(_texBg);
     
+    Area viewport = gl::getViewport();
+    
+    _strokes->bindFramebuffer();
+    gl::clear(ColorA(.0, .0, .0, .0));
+    gl::setViewport(_strokes->getBounds());
     gl::setMatrices(*_cameraStage);
-//    gl::rotate(sceneQuat->quat);
-//    gl::color(1.0, 0.0, 0.0, 1.0);
-//    gl::drawSphere(Vec3f(0, 0, 0), 200);
-
     for(int i =0; i<_ribbons.size(); i++) {
         _ribbons[i]->render(_brushes[_ribbons[i]->textureIndex]);
     }
@@ -105,4 +123,10 @@ void SceneRibbon::render() {
         InkDrop* ink = GlobalSettings::getInstance().inkDrops[i];
         _vDrop->render(ink, _drops[ink->textureIndex]);
     }
+    
+    _strokes->unbindFramebuffer();
+    
+    gl::setViewport(viewport);
+    gl::setMatrices(*_cameraOrtho);
+    _vPost->render(_strokes->getTexture(), _movie.getTexture(), _texBg);
 }

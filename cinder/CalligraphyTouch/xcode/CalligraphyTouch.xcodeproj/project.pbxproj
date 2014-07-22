@@ -36,6 +36,7 @@
 		854B2C97197D17450034F07E /* ViewCopy.cpp in Sources */ = {isa = PBXBuildFile; fileRef = 854B2C88197D17450034F07E /* ViewCopy.cpp */; };
 		854B2C98197D17450034F07E /* ViewDrop.cpp in Sources */ = {isa = PBXBuildFile; fileRef = 854B2C8A197D17450034F07E /* ViewDrop.cpp */; };
 		854B2C99197D17450034F07E /* ViewRibbon.cpp in Sources */ = {isa = PBXBuildFile; fileRef = 854B2C8C197D17450034F07E /* ViewRibbon.cpp */; };
+		85E35598197E9A250095023E /* ViewPost.cpp in Sources */ = {isa = PBXBuildFile; fileRef = 85E35596197E9A250095023E /* ViewPost.cpp */; };
 		8785C5E953E14C7AA91EBC69 /* IOKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 57D2670D007F418C8A451304 /* IOKit.framework */; };
 		8D11072F0486CEB800E47090 /* Cocoa.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 1058C7A1FEA54F0111CA2CBB /* Cocoa.framework */; };
 		A62D963F75044CFAA3A2B8AE /* registration.c in Sources */ = {isa = PBXBuildFile; fileRef = 35DCC157CCA044D8964E921E /* registration.c */; };
@@ -91,6 +92,8 @@
 		854B2C8B197D17450034F07E /* ViewDrop.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = ViewDrop.h; path = ../src/ViewDrop.h; sourceTree = "<group>"; };
 		854B2C8C197D17450034F07E /* ViewRibbon.cpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.cpp; name = ViewRibbon.cpp; path = ../src/ViewRibbon.cpp; sourceTree = "<group>"; };
 		854B2C8D197D17450034F07E /* ViewRibbon.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = ViewRibbon.h; path = ../src/ViewRibbon.h; sourceTree = "<group>"; };
+		85E35596197E9A250095023E /* ViewPost.cpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.cpp; name = ViewPost.cpp; path = ../src/ViewPost.cpp; sourceTree = "<group>"; };
+		85E35597197E9A250095023E /* ViewPost.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = ViewPost.h; path = ../src/ViewPost.h; sourceTree = "<group>"; };
 		88F8E1C3F3C7465FBCC09542 /* tilt.c */ = {isa = PBXFileReference; lastKnownFileType = "\"\""; name = tilt.c; path = "../blocks/Cinder-Freenect/src/freenect/tilt.c"; sourceTree = "<group>"; };
 		8D1107320486CEB800E47090 /* CalligraphyTouch.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = CalligraphyTouch.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		A0CC1917E1414E5FB786EBB0 /* CinderApp.icns */ = {isa = PBXFileReference; lastKnownFileType = image.icns; name = CinderApp.icns; path = ../resources/CinderApp.icns; sourceTree = "<group>"; };
@@ -199,6 +202,7 @@
 				854B2C8D197D17450034F07E /* ViewRibbon.h */,
 				308D04CDB39E4D57A68728F7 /* Resources.h */,
 				5E3D8BA5BD8C47E3ABADADEA /* CalligraphyTouch_Prefix.pch */,
+				85E35597197E9A250095023E /* ViewPost.h */,
 			);
 			name = Headers;
 			sourceTree = "<group>";
@@ -272,6 +276,7 @@
 				854B2C88197D17450034F07E /* ViewCopy.cpp */,
 				854B2C8A197D17450034F07E /* ViewDrop.cpp */,
 				854B2C8C197D17450034F07E /* ViewRibbon.cpp */,
+				85E35596197E9A250095023E /* ViewPost.cpp */,
 			);
 			name = views;
 			sourceTree = "<group>";
@@ -374,6 +379,7 @@
 				A62D963F75044CFAA3A2B8AE /* registration.c in Sources */,
 				D69B41FE4A5149B389A8A3A8 /* tilt.c in Sources */,
 				854B2C90197D17450034F07E /* Scene.cpp in Sources */,
+				85E35598197E9A250095023E /* ViewPost.cpp in Sources */,
 				676D08828FC04FC7B463DF07 /* usb_libusb10.c in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;

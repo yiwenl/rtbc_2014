@@ -24,6 +24,8 @@ public:
     void                    render(gl::TextureRef);
     void                    update();
     int                     textureIndex;
+    float                   theta;
+    float                   angleScale;
     
 private:
     void                    _init();

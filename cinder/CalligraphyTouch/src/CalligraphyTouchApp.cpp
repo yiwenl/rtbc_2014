@@ -50,9 +50,20 @@ void CalligraphyTouchApp::setup() {
     srand (time(NULL));
     
     gl::enableAlphaBlending();
-    gl::disable(GL_DEPTH_TEST);
-    gl::enable(GL_TEXTURE_2D);
-    gl::disable(GL_CULL_FACE);
+    gl::enable( GL_TEXTURE_2D );
+    gl::enable( GL_TEXTURE_RECTANGLE_ARB );
+    gl::disable( GL_DEPTH_TEST );
+    gl::disable( GL_CULL_FACE );
+    
+    
+    //  MIP MAPPING
+    glTexGeni(GL_S, GL_TEXTURE_GEN_MODE, GL_SPHERE_MAP);
+    glTexGeni(GL_T, GL_TEXTURE_GEN_MODE, GL_SPHERE_MAP);
+    glEnable(GL_TEXTURE_GEN_S);
+    glEnable(GL_TEXTURE_GEN_T);
+    
+    gl::Texture::Format format;
+    format.enableMipmapping( true );
     
     _scene          = new SceneRibbon(getWindow());
     _params         = params::InterfaceGl::create( "Ribbon", Vec2i( 300, getWindowHeight()-30 ) );
@@ -107,7 +118,7 @@ void CalligraphyTouchApp::reset() {
     
     _spline = BSpline3f( _points, 3, false, true );
     
-    for( float p = 0.1f; p < 0.9f; p += GlobalSettings::getInstance().splineGap ) {
+    for( float p = 0.1f; p < 1.0f; p += GlobalSettings::getInstance().splineGap ) {
         Vec3f pp = _spline.getPosition( p );
         Vec3f pd = _spline.getDerivative( p );
         _pointSpline.push_back(pp);
@@ -203,9 +214,8 @@ void CalligraphyTouchApp::mouseDrag( MouseEvent event ) {
             _points.push_back(pos);
             _needReset = true;
             
-            if(rand()%100 > 95) {
-                cout << " Add Ink Drop : " << endl;
-                InkDrop* ink = new InkDrop(pos, rand()%6, MathUtils::random(50, 100) );
+            if(rand()%100 > 90) {
+                InkDrop* ink = new InkDrop(pos, rand()%6, MathUtils::random(100, 200) );
                 GlobalSettings::getInstance().inkDrops.push_back(ink);
             }
         }
@@ -229,6 +239,9 @@ void CalligraphyTouchApp::keyDown( KeyEvent event ) {
         _scene->updateBrush();
     } else if(event.getChar() == 'f') {
         setFullScreen(!isFullScreen());
+    } else if(event.getChar() == 'h') {
+        if(_params->isVisible()) _params->hide();
+        else _params->show();
     }
 }
 

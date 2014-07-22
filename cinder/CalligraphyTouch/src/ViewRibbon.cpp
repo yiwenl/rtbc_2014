@@ -8,6 +8,7 @@
 
 #include "ViewRibbon.h"
 #include "GlobalSettings.h"
+#include "MathUtils.h"
 
 using namespace ci;
 using namespace std;
@@ -27,7 +28,8 @@ ViewRibbon::ViewRibbon(string vsPath, string fsPath) : View(vsPath, fsPath) {
 
 
 void ViewRibbon::_init() {
-    
+    theta       = bongiovi::utils::MathUtils::random(M_PI * 2.0);
+    angleScale  = bongiovi::utils::MathUtils::random(1.0, 4.0);
 }
 
 
@@ -40,7 +42,6 @@ void ViewRibbon::update() {
     vector<uint> indices;
     vector<Vec3f> positions;
     vector<Vec2f> coords;
-
     
     Vec3f p0, p1, yAxis0, yAxis1;
     int count = 0;
@@ -50,11 +51,14 @@ void ViewRibbon::update() {
         p1          = GlobalSettings::getInstance().pointsSpline[i+1];
         yAxis0      = GlobalSettings::getInstance().points[i] * GlobalSettings::getInstance().ribbonWidth;
         yAxis1      = GlobalSettings::getInstance().points[i+1] * GlobalSettings::getInstance().ribbonWidth;
+        float offset = sin(i/(total+1) * M_PI * angleScale + theta);
+        offset      = (offset + 1.0) * .5;
+        offset      = offset * .9 + .1;
         
-        positions.push_back(p0 + yAxis0);
-        positions.push_back(p1 + yAxis1);
-        positions.push_back(p1 - yAxis1);
-        positions.push_back(p0 - yAxis0);
+        positions.push_back(p0 + yAxis0*offset);
+        positions.push_back(p1 + yAxis1*offset);
+        positions.push_back(p1 - yAxis1*offset);
+        positions.push_back(p0 - yAxis0*offset);
         
         coords.push_back(Vec2f(i/total, 0));
         coords.push_back(Vec2f((i+1)/total, 0));

@@ -24,7 +24,7 @@ Scene::Scene(app::WindowRef window) : _window(window){
 	_center			= Vec3f::zero();
 	_up				= Vec3f::yAxis();
 	_camera->setPerspective( 45.0f, ci::app::getWindowAspectRatio(), 5.0f, 2000.0f );
-    _cameraOrtho->setOrtho( -1, 1, -1, 1, -1, 1 );
+    _cameraOrtho->setOrtho( -1, 1, 1, -1, -1, 1 );
 
     
     mCbMouseDown    = _window->getSignalMouseDown().connect( std::bind( &Scene::mouseDown, this, std::_1 ) );
