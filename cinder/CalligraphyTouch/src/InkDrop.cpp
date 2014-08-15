@@ -31,6 +31,7 @@ Vec2f InkDrop::update() {
     Vec2f uvOffset(0, 0);
     uvOffset.x = (currFrame % gap) * uvGap;
     uvOffset.y = floor(currFrame / gap) * uvGap;
+    alpha           -= .01;
     
     return uvOffset;
 }

@@ -26,6 +26,7 @@ class InkDrop {
     float           size;
     float           uvGap;
     float           rotation;
+    float           alpha = 2.0f;
     
     
     Vec2f           update();

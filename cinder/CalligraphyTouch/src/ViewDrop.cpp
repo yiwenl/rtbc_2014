@@ -68,6 +68,7 @@ void ViewDrop::render(InkDrop* ink, gl::TextureRef texture) {
     shader->uniform("uvOffset", uvOffset);
     shader->uniform("isInDark", GlobalSettings::getInstance().isInDark);
     shader->uniform("rotation", ink->rotation);
+    shader->uniform("alpha", ink->alpha > 1 ? 1 : ink->alpha);
     texture->bind();
     gl::draw(mesh);
     texture->unbind();

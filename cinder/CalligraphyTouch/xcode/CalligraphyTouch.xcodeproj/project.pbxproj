@@ -36,6 +36,9 @@
 		854B2C97197D17450034F07E /* ViewCopy.cpp in Sources */ = {isa = PBXBuildFile; fileRef = 854B2C88197D17450034F07E /* ViewCopy.cpp */; };
 		854B2C98197D17450034F07E /* ViewDrop.cpp in Sources */ = {isa = PBXBuildFile; fileRef = 854B2C8A197D17450034F07E /* ViewDrop.cpp */; };
 		854B2C99197D17450034F07E /* ViewRibbon.cpp in Sources */ = {isa = PBXBuildFile; fileRef = 854B2C8C197D17450034F07E /* ViewRibbon.cpp */; };
+		856A631D198E424200B4C57C /* ViewDot.cpp in Sources */ = {isa = PBXBuildFile; fileRef = 856A631B198E424200B4C57C /* ViewDot.cpp */; };
+		8584358B198D43B800303CDF /* TouchFinder.cpp in Sources */ = {isa = PBXBuildFile; fileRef = 85843589198D43B800303CDF /* TouchFinder.cpp */; };
+		8584358F198D50E200303CDF /* ViewKinectDepth.cpp in Sources */ = {isa = PBXBuildFile; fileRef = 8584358D198D50E200303CDF /* ViewKinectDepth.cpp */; };
 		85E35598197E9A250095023E /* ViewPost.cpp in Sources */ = {isa = PBXBuildFile; fileRef = 85E35596197E9A250095023E /* ViewPost.cpp */; };
 		8785C5E953E14C7AA91EBC69 /* IOKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 57D2670D007F418C8A451304 /* IOKit.framework */; };
 		8D11072F0486CEB800E47090 /* Cocoa.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 1058C7A1FEA54F0111CA2CBB /* Cocoa.framework */; };
@@ -92,6 +95,12 @@
 		854B2C8B197D17450034F07E /* ViewDrop.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = ViewDrop.h; path = ../src/ViewDrop.h; sourceTree = "<group>"; };
 		854B2C8C197D17450034F07E /* ViewRibbon.cpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.cpp; name = ViewRibbon.cpp; path = ../src/ViewRibbon.cpp; sourceTree = "<group>"; };
 		854B2C8D197D17450034F07E /* ViewRibbon.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = ViewRibbon.h; path = ../src/ViewRibbon.h; sourceTree = "<group>"; };
+		856A631B198E424200B4C57C /* ViewDot.cpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.cpp; name = ViewDot.cpp; path = ../src/ViewDot.cpp; sourceTree = "<group>"; };
+		856A631C198E424200B4C57C /* ViewDot.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = ViewDot.h; path = ../src/ViewDot.h; sourceTree = "<group>"; };
+		85843589198D43B800303CDF /* TouchFinder.cpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.cpp; name = TouchFinder.cpp; path = ../src/TouchFinder.cpp; sourceTree = "<group>"; };
+		8584358A198D43B800303CDF /* TouchFinder.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = TouchFinder.h; path = ../src/TouchFinder.h; sourceTree = "<group>"; };
+		8584358D198D50E200303CDF /* ViewKinectDepth.cpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.cpp; name = ViewKinectDepth.cpp; path = ../src/ViewKinectDepth.cpp; sourceTree = "<group>"; };
+		8584358E198D50E200303CDF /* ViewKinectDepth.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = ViewKinectDepth.h; path = ../src/ViewKinectDepth.h; sourceTree = "<group>"; };
 		85E35596197E9A250095023E /* ViewPost.cpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.cpp; name = ViewPost.cpp; path = ../src/ViewPost.cpp; sourceTree = "<group>"; };
 		85E35597197E9A250095023E /* ViewPost.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = ViewPost.h; path = ../src/ViewPost.h; sourceTree = "<group>"; };
 		88F8E1C3F3C7465FBCC09542 /* tilt.c */ = {isa = PBXFileReference; lastKnownFileType = "\"\""; name = tilt.c; path = "../blocks/Cinder-Freenect/src/freenect/tilt.c"; sourceTree = "<group>"; };
@@ -138,8 +147,8 @@
 			children = (
 				690B37F9026249E0BED1FEF9 /* CalligraphyTouchApp.cpp */,
 				854B2C82197D17450034F07E /* GlobalSettings.cpp */,
-				854B2C84197D17450034F07E /* InkDrop.cpp */,
 				854B2C86197D17450034F07E /* SceneRibbon.cpp */,
+				8584358C198D43CA00303CDF /* components */,
 				854B2C9A197D17590034F07E /* views */,
 				854B2C75197D17450034F07E /* bongiovi */,
 			);
@@ -203,6 +212,9 @@
 				308D04CDB39E4D57A68728F7 /* Resources.h */,
 				5E3D8BA5BD8C47E3ABADADEA /* CalligraphyTouch_Prefix.pch */,
 				85E35597197E9A250095023E /* ViewPost.h */,
+				8584358A198D43B800303CDF /* TouchFinder.h */,
+				8584358E198D50E200303CDF /* ViewKinectDepth.h */,
+				856A631C198E424200B4C57C /* ViewDot.h */,
 			);
 			name = Headers;
 			sourceTree = "<group>";
@@ -277,8 +289,19 @@
 				854B2C8A197D17450034F07E /* ViewDrop.cpp */,
 				854B2C8C197D17450034F07E /* ViewRibbon.cpp */,
 				85E35596197E9A250095023E /* ViewPost.cpp */,
+				8584358D198D50E200303CDF /* ViewKinectDepth.cpp */,
+				856A631B198E424200B4C57C /* ViewDot.cpp */,
 			);
 			name = views;
+			sourceTree = "<group>";
+		};
+		8584358C198D43CA00303CDF /* components */ = {
+			isa = PBXGroup;
+			children = (
+				854B2C84197D17450034F07E /* InkDrop.cpp */,
+				85843589198D43B800303CDF /* TouchFinder.cpp */,
+			);
+			name = components;
 			sourceTree = "<group>";
 		};
 		D7639BDF0D674D00AC02BC92 /* freenect */ = {
@@ -364,9 +387,12 @@
 				4754340106E8457CA967E639 /* CalligraphyTouchApp.cpp in Sources */,
 				854B2C8E197D17450034F07E /* MathUtils.cpp in Sources */,
 				854B2C91197D17450034F07E /* SceneQuat.cpp in Sources */,
+				856A631D198E424200B4C57C /* ViewDot.cpp in Sources */,
 				854B2C98197D17450034F07E /* ViewDrop.cpp in Sources */,
 				4330ECB85F864F5DA3C497A4 /* CinderFreenect.cpp in Sources */,
 				854B2C8F197D17450034F07E /* MeshUtils.cpp in Sources */,
+				8584358F198D50E200303CDF /* ViewKinectDepth.cpp in Sources */,
+				8584358B198D43B800303CDF /* TouchFinder.cpp in Sources */,
 				FD9C37808B484BE1A8099CB6 /* cameras.c in Sources */,
 				854B2C97197D17450034F07E /* ViewCopy.cpp in Sources */,
 				D3A8D0BAC2D54477A5E49285 /* core.c in Sources */,

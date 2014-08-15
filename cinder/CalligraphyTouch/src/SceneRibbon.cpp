@@ -41,7 +41,7 @@ void SceneRibbon::_initTextures() {
     format.setMagFilter(GL_LINEAR);
     
     int size        = 1024;
-    _strokes        = new gl::Fbo(size*2, size, format);
+    _strokes        = new gl::Fbo(size, size, format);
     _strokes->bindFramebuffer();
     gl::clear();
     _strokes->unbindFramebuffer();
@@ -103,6 +103,7 @@ void SceneRibbon::clearAll() {
 
 
 void SceneRibbon::render() {
+    if(GlobalSettings::getInstance().debugKinect) return;
     gl::setMatrices(*_cameraOrtho);
     _vBg->render(GlobalSettings::getInstance().isInDark ? _texBgDark : _texBg);
     
@@ -118,11 +119,16 @@ void SceneRibbon::render() {
     
     if(isStarted) _vRibbon->render(_brushes[_vRibbon->textureIndex]);
     
-    
-    for(int i =0; i<GlobalSettings::getInstance().inkDrops.size(); i++) {
-        InkDrop* ink = GlobalSettings::getInstance().inkDrops[i];
-        _vDrop->render(ink, _drops[ink->textureIndex]);
+    vector<InkDrop*>::iterator it = GlobalSettings::getInstance().inkDrops.begin();
+    while(it != GlobalSettings::getInstance().inkDrops.end()) {
+        if((*it)->alpha <= 0) {
+            it = GlobalSettings::getInstance().inkDrops.erase(it);
+        } else {
+            _vDrop->render((*it), _drops[(*it)->textureIndex]);
+            it++;
+        }
     }
+
     
     _strokes->unbindFramebuffer();
     

@@ -34,6 +34,11 @@ class GlobalSettings {
     float   ribbonWidth                 = 30.0f;
     bool    isFlatten                   = false;
     bool    isInDark                    = false;
+    bool    debugKinect                 = false;
+    
+    float   minDepth                    = .4;
+    float   detectRange                 = .1;
+    float   contrastOffset              = 5.0;
     
     
     vector<Vec3f>       points;

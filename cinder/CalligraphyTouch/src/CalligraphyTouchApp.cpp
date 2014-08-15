@@ -4,6 +4,7 @@
 #include "cinder/BSpline.h"
 #include "MathUtils.h"
 #include "GlobalSettings.h"
+#include "TouchFinder.h"
 #include "cinder/params/Params.h"
 
 using namespace ci;
@@ -24,6 +25,7 @@ class CalligraphyTouchApp : public AppNative {
     void reset();
     void clear();
     void clearAll();
+    void shutdown();
     
     private :
     SceneRibbon*                    _scene;
@@ -41,6 +43,8 @@ class CalligraphyTouchApp : public AppNative {
     float                           _camY = 0;
     float                           _camZ = 0;
     Vec3f                           _lastPoint;
+    
+    TouchFinder*                    _touchFinder;
 };
 
 void CalligraphyTouchApp::setup() {
@@ -66,6 +70,9 @@ void CalligraphyTouchApp::setup() {
     format.enableMipmapping( true );
     
     _scene          = new SceneRibbon(getWindow());
+    _touchFinder    = new TouchFinder(_scene);
+    
+    
     _params         = params::InterfaceGl::create( "Ribbon", Vec2i( 300, getWindowHeight()-30 ) );
     _params->addParam( "FPS",                       &GlobalSettings::getInstance().fps);
     _params->addSeparator();
@@ -79,6 +86,11 @@ void CalligraphyTouchApp::setup() {
     _params->addParam( "Leap Motion Offset",        &GlobalSettings::getInstance().leapMotionOffset, "min=0.0 max=5.0. step=0.1");
     _params->addParam( "Is Flatten",                &GlobalSettings::getInstance().isFlatten);
     _params->addParam( "Is In Dark",                &GlobalSettings::getInstance().isInDark);
+    
+    _params->addSeparator();
+    _params->addText("Kincet");
+    _params->addParam( "Min Detect Depth", &GlobalSettings::getInstance().minDepth, "min=0.0 max=1.0 step=.001");
+    _params->addParam( "Contrast", &GlobalSettings::getInstance().contrastOffset, "min=0.0 max=20.0 step=.1");
     
 }
 
@@ -112,14 +124,13 @@ void CalligraphyTouchApp::reset() {
     _pointSpline.empty();
     _pointSpline.clear();
     _pointDir.empty();
-    _pointDir.clear();
-    while(_points.size() > GlobalSettings::getInstance().maxPoints) {
+    _pointDir.clear();        while(_points.size() > GlobalSettings::getInstance().maxPoints) {
         _points.erase(_points.begin());
     }
     
     _spline = BSpline3f( _points, 3, false, true );
     
-    for( float p = 0.1f; p < 1.0f; p += GlobalSettings::getInstance().splineGap ) {
+    for( float p = 0.0f; p < 1.0f; p += GlobalSettings::getInstance().splineGap ) {
         Vec3f pp = _spline.getPosition( p );
         Vec3f pd = _spline.getDerivative( p );
         _pointSpline.push_back(pp);
@@ -128,7 +139,6 @@ void CalligraphyTouchApp::reset() {
     
     
     int n = _pointSpline.size();
-    _frames.clear();
     _frames.clear();
     _frames.resize( n );
     // Make the parallel transport frame
@@ -163,8 +173,49 @@ void CalligraphyTouchApp::reset() {
 void CalligraphyTouchApp::draw()
 {
 	// clear out the window with black
-	gl::clear( Color( 0, 0, 0 ) );
-    gl::clear( Color( 0, 0, 0 ) );
+/*
+    Vec2f posKinect = _touchFinder->update();
+    if(posKinect.x > 10000) {
+        _params->draw();
+        return;
+    }
+    
+    
+    if(posKinect.x > 0) {
+        Vec3f pos(posKinect.x, posKinect.y, 0.0);
+        if(!_isRecording) {
+            _isRecording = true;
+            clear();
+            _scene->createRibbon();
+//            cout << "TOUCH DOWN " << endl;
+        } else {
+//            cout << " TOUCH MOVE " << endl;
+            if(_points.size() == 0) {
+                _points.push_back(pos);
+            } else {
+                Vec3f lastPoint = _points[_points.size()-1];
+                if( ( pos - lastPoint).length() > GlobalSettings::getInstance().minPointDistance ) {
+                    _points.push_back(pos);
+                    _needReset = true;
+                    
+                    if(rand()%100 > 90) {
+                        InkDrop* ink = new InkDrop(pos, rand()%6, MathUtils::random(150, 250) );
+                        GlobalSettings::getInstance().inkDrops.push_back(ink);
+                    }
+                }
+            }
+        }
+    } else {
+        if(_isRecording) {
+           _isRecording = false;
+            _scene->saveRibbon();
+            clear();
+            
+//            cout << "TOUCH UP " << endl;
+        }
+    }
+    
+    */
     _scene->render();
     _params->draw();
 }
@@ -207,6 +258,8 @@ void CalligraphyTouchApp::mouseDrag( MouseEvent event ) {
     pos.x       = event.getPos().x;
     pos.y       = -event.getPos().y;
     
+//    cout << pos << endl;
+    
     if(_points.size() == 0) {
         _points.push_back(pos);
     } else {
@@ -243,8 +296,13 @@ void CalligraphyTouchApp::keyDown( KeyEvent event ) {
     } else if(event.getChar() == 'h') {
         if(_params->isVisible()) _params->hide();
         else _params->show();
+        
+        if(_params->isVisible()) showCursor();
+        else hideCursor();
     } else if(event.getChar() == 's') {
         GlobalSettings::getInstance().isInDark = !GlobalSettings::getInstance().isInDark;
+    } else if(event.getChar() == 'k') {
+        GlobalSettings::getInstance().debugKinect = !GlobalSettings::getInstance().debugKinect;
     }
 }
 
@@ -255,6 +313,10 @@ void CalligraphyTouchApp::keyUp( KeyEvent event ) {
         _scene->saveRibbon();
         clear();
     }
+}
+
+void CalligraphyTouchApp::shutdown() {
+    cout << "SHUT DOWN" << endl;
 }
 
 
