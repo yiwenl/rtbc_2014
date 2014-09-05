@@ -22,15 +22,16 @@ InkDrop::InkDrop(Vec3f _loc, int index, float _size) {
     totalFrames     = gap * gap;
     size            = _size;
     rotation        = MathUtils::random(M_PI * 2);
+    uvOffset        = new Vec2f(0, 0);
 }
 
 
 Vec2f InkDrop::update() {
     currFrame ++;
-    if(currFrame >= totalFrames) currFrame = totalFrames-1;
-    Vec2f uvOffset(0, 0);
-    uvOffset.x = (currFrame % gap) * uvGap;
-    uvOffset.y = floor(currFrame / gap) * uvGap;
+    if(currFrame >= totalFrames) return *uvOffset;
+//    if(currFrame >= totalFrames) currFrame = totalFrames-1;
+    uvOffset->x = (currFrame % gap) * uvGap;
+    uvOffset->y = floor(currFrame / gap) * uvGap;
     
-    return uvOffset;
+    return *uvOffset;
 }

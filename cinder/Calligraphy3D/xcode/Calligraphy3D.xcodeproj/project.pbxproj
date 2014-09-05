@@ -19,6 +19,8 @@
 		5323E6B20EAFCA74003A9687 /* CoreVideo.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 5323E6B10EAFCA74003A9687 /* CoreVideo.framework */; };
 		5323E6B60EAFCA7E003A9687 /* QTKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 5323E6B50EAFCA7E003A9687 /* QTKit.framework */; };
 		8535AD51197EEF2300E6005B /* ViewPost.cpp in Sources */ = {isa = PBXBuildFile; fileRef = 8535AD4F197EEF2300E6005B /* ViewPost.cpp */; };
+		858BF1BD19AA965400947C9C /* EffectComposer.cpp in Sources */ = {isa = PBXBuildFile; fileRef = 858BF1BB19AA965400947C9C /* EffectComposer.cpp */; };
+		858BF1C019AA96AA00947C9C /* ViewBlur.cpp in Sources */ = {isa = PBXBuildFile; fileRef = 858BF1BE19AA96AA00947C9C /* ViewBlur.cpp */; };
 		85E4738A197D0EA200576AD4 /* GlobalSettings.cpp in Sources */ = {isa = PBXBuildFile; fileRef = 85E4737E197D0EA200576AD4 /* GlobalSettings.cpp */; };
 		85E4738B197D0EA200576AD4 /* InkDrop.cpp in Sources */ = {isa = PBXBuildFile; fileRef = 85E47380197D0EA200576AD4 /* InkDrop.cpp */; };
 		85E4738C197D0EA200576AD4 /* SceneRibbon.cpp in Sources */ = {isa = PBXBuildFile; fileRef = 85E47382197D0EA200576AD4 /* SceneRibbon.cpp */; };
@@ -72,6 +74,10 @@
 		6B3F49C331B842F9BA4B217D /* QuickTime.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = QuickTime.framework; path = System/Library/Frameworks/QuickTime.framework; sourceTree = SDKROOT; };
 		8535AD4F197EEF2300E6005B /* ViewPost.cpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.cpp; name = ViewPost.cpp; path = ../src/ViewPost.cpp; sourceTree = "<group>"; };
 		8535AD50197EEF2300E6005B /* ViewPost.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = ViewPost.h; path = ../src/ViewPost.h; sourceTree = "<group>"; };
+		858BF1BB19AA965400947C9C /* EffectComposer.cpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.cpp; path = EffectComposer.cpp; sourceTree = "<group>"; };
+		858BF1BC19AA965400947C9C /* EffectComposer.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = EffectComposer.h; sourceTree = "<group>"; };
+		858BF1BE19AA96AA00947C9C /* ViewBlur.cpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.cpp; path = ViewBlur.cpp; sourceTree = "<group>"; };
+		858BF1BF19AA96AA00947C9C /* ViewBlur.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = ViewBlur.h; sourceTree = "<group>"; };
 		85E4737E197D0EA200576AD4 /* GlobalSettings.cpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.cpp; name = GlobalSettings.cpp; path = ../src/GlobalSettings.cpp; sourceTree = "<group>"; };
 		85E4737F197D0EA200576AD4 /* GlobalSettings.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = GlobalSettings.h; path = ../src/GlobalSettings.h; sourceTree = "<group>"; };
 		85E47380197D0EA200576AD4 /* InkDrop.cpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.cpp; name = InkDrop.cpp; path = ../src/InkDrop.cpp; sourceTree = "<group>"; };
@@ -276,6 +282,10 @@
 		85E47391197D0EC500576AD4 /* bongiovi */ = {
 			isa = PBXGroup;
 			children = (
+				858BF1BE19AA96AA00947C9C /* ViewBlur.cpp */,
+				858BF1BF19AA96AA00947C9C /* ViewBlur.h */,
+				858BF1BB19AA965400947C9C /* EffectComposer.cpp */,
+				858BF1BC19AA965400947C9C /* EffectComposer.h */,
 				85E47392197D0EC500576AD4 /* MathUtils.cpp */,
 				85E47393197D0EC500576AD4 /* MathUtils.h */,
 				85E47394197D0EC500576AD4 /* MeshUtils.cpp */,
@@ -377,8 +387,10 @@
 				8535AD51197EEF2300E6005B /* ViewPost.cpp in Sources */,
 				85E4738E197D0EA200576AD4 /* ViewDrop.cpp in Sources */,
 				85E4738A197D0EA200576AD4 /* GlobalSettings.cpp in Sources */,
+				858BF1C019AA96AA00947C9C /* ViewBlur.cpp in Sources */,
 				85E4738D197D0EA200576AD4 /* ViewCopy.cpp in Sources */,
 				2D7CFEBC36F5428081967D78 /* Calligraphy3DApp.cpp in Sources */,
+				858BF1BD19AA965400947C9C /* EffectComposer.cpp in Sources */,
 				85E473A0197D0EC500576AD4 /* Scene.cpp in Sources */,
 				85E473A1197D0EC500576AD4 /* SceneQuat.cpp in Sources */,
 				EE30576C6C544460A4ABE061 /* Cinder-LeapMotion.cpp in Sources */,

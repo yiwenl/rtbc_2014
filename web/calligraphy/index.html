@@ -1,0 +1,84 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<title>Calligraphy</title>
+		<link rel="stylesheet" type="text/css" href="css/main.css">
+
+		<!-- B-REEL FRAMEWORK -->
+		<script src="js/breel/utils/PolyFills.js"></script>
+		<script src="js/breel/breel.js"></script>
+		<script src="js/breel/utils/BrowserDetector.js"></script>
+		<script src="js/breel/abstract/InitObject.js"></script>
+		<script src="js/breel/events/EventDispatcher.js"></script>
+
+		<!-- LIBS -->
+		<script type="text/javascript" src="js/libs/leap.min.js"></script>
+		<script type="text/javascript" src="js/libs/Tween.js"></script>
+		<script type="text/javascript" src="js/libs/Stats.js"></script>
+		<script type="text/javascript" src="js/libs/Perlin.js"></script>
+		<script type="text/javascript" src="js/libs/dat.gui.js"></script>
+		<script type="text/javascript" src="js/libs/glMatrix-0.9.5.min.js"></script>
+		<script type="text/javascript" src="js/bongiovi/SceneMatrix.js"></script>
+		<script type="text/javascript" src="js/bongiovi/GLModel.js"></script>
+		<script type="text/javascript" src="js/bongiovi/GLTexture.js"></script>
+		<script type="text/javascript" src="js/bongiovi/GLModelShader.js"></script>
+		<script type="text/javascript" src="js/bongiovi/ProjectionPerspectiveMatrix.js"></script>
+		<script type="text/javascript" src="js/bongiovi/SimpleCamera.js"></script>
+		<script type="text/javascript" src="js/bongiovi/HoverCamera.js"></script>
+		<script type="text/javascript" src="js/bongiovi/Scheduler.js"></script>
+		<script type="text/javascript" src="js/bongiovi/Scene.js"></script>
+		<script type="text/javascript" src="js/bongiovi/SimpleImageLoader.js"></script>
+		<script type="text/javascript" src="js/bongiovi/View.js"></script>
+
+		<!-- LOCAL SCRIPTS -->
+		<script type="text/javascript" src="js/Shaders.js"></script>
+		<script type="text/javascript" src="js/MathUtils.js"></script>
+		<script type="text/javascript" src="js/Particle.js"></script>
+		<script type="text/javascript" src="js/ViewParticles.js"></script>
+		<script type="text/javascript" src="js/ViewDrops.js"></script>
+		<script type="text/javascript" src="js/ViewBg.js"></script>
+		<script type="text/javascript" src="js/ViewBlur.js"></script>
+		<script type="text/javascript" src="js/ViewPost.js"></script>
+		<script type="text/javascript" src="js/Index.js"></script>
+
+		<script type="text/javascript">
+			var scheduler, main, images, stats;
+			function init() {
+				var loader = new SimpleImageLoader();
+				loader.load([
+					"assets/drop01.png",
+					"assets/drop02.png",
+					"assets/drop03.png",
+					"assets/drop04.png",
+					"assets/drop05.png",
+					"assets/drop06.png",
+					"assets/brush0.png",
+					"assets/brush1.png",
+					"assets/brush2.png",
+					"assets/brush3.png",
+					"assets/brush4.png",
+					"assets/floor.jpg"
+					], this, this._imgLoaded)
+				
+			}
+
+			function _imgLoaded(img) {
+				console.log( "Init : ", img );
+				images = img;
+				scheduler = new Scheduler();
+				main = new Flocking(document.body);
+				scheduler.addEF(main, main.render, []);
+
+				return;
+				stats = new Stats();
+				document.body.appendChild(stats.domElement);
+				scheduler.addEF(stats, stats.update, []);				
+			}
+		</script>
+		
+	</head>
+
+	<body onload="init();">
+		<video id="bwVideo" src="assets/bw256.mp4" autoplay loop></video>
+	</body>
+</html>

@@ -34,6 +34,7 @@ vec3 brightness(vec3 color, float scale) {
 #define PI          3.1415926
 #define PI2         1.5707
 
+
 void main(void) {
     vec2 texCoord   = gl_TexCoord[0].st;
     texCoord.y      = 1.0 - texCoord.y;
@@ -49,10 +50,11 @@ void main(void) {
     
     depth           = sin(depth * PI2);
     depth           = 1.0 - cos(depth * PI2);
-    
+    vec3 colorBackground = vec3(.945, .8705, .81176);
     
     vec3 colorGrey  = Desaturate(color.rgb, 1.0).rgb;
-    colorGrey       = contrast(colorGrey, 0.1);
+    colorGrey       = contrast(colorGrey, 0.5);
+    colorGrey       *= colorBackground;
     color.rgb       = mix(color.rgb, colorGrey, depth);
     color.rgb       += toAdd*.65;
     gl_FragColor    = color;

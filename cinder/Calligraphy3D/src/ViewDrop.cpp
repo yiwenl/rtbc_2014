@@ -67,12 +67,29 @@ void ViewDrop::render(InkDrop* ink, gl::TextureRef texture) {
     shader->uniform("uvGap", ink->uvGap);
     shader->uniform("uvOffset", uvOffset);
     shader->uniform("isInDark", GlobalSettings::getInstance().isInDark);
-    shader->uniform("rotation", ink->rotation);
+//    shader->uniform("rotation", ink->rotation);
     texture->bind();
     gl::draw(mesh);
     texture->unbind();
     shader->unbind();
+}
 
+
+void ViewDrop::render(InkDrop* ink, gl::TextureRef texture, int state) {
+    if(state == 0) {
+        shader->bind();
+        shader->uniform("texture", 0);
+    }
+    shader->uniform("size", ink->size);
+    shader->uniform("location", ink->loc);
+    shader->uniform("uvGap", ink->uvGap);
+    shader->uniform("uvOffset", ink->update());
+    shader->uniform("isInDark", GlobalSettings::getInstance().isInDark);
+//    shader->uniform("rotation", ink->rotation);
+    texture->bind();
+    gl::draw(mesh);
+    texture->unbind();
+    if(state == 2) shader->unbind();
 }
 
 void ViewDrop::render() {

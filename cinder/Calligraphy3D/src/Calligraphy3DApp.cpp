@@ -46,10 +46,11 @@ public:
     float                           _camY = 0;
     float                           _camZ = 0;
     Vec3f                           _lastPoint;
+    int                             _state = 5;
 };
 
 void Calligraphy3DApp::setup() {
-    setWindowSize(1920, 1080);
+    setWindowSize(1280, 720);
     setWindowPos(0, 0);
     setFrameRate(60);
     srand (time(NULL));
@@ -58,6 +59,9 @@ void Calligraphy3DApp::setup() {
     gl::disable(GL_DEPTH_TEST);
     gl::enable(GL_TEXTURE_2D);
     gl::disable(GL_CULL_FACE);
+    
+    glTexParameteri(GL_TEXTURE_2D,GL_TEXTURE_MIN_FILTER,GL_LINEAR);
+    glTexParameteri(GL_TEXTURE_2D,GL_TEXTURE_MAG_FILTER,GL_LINEAR);
     
     _device         = LeapMotion::Device::create();
     _device->connectEventHandler(&Calligraphy3DApp::onFrame, this);
@@ -76,6 +80,17 @@ void Calligraphy3DApp::setup() {
     _params->addParam( "Leap Motion Offset",        &GlobalSettings::getInstance().leapMotionOffset, "min=0.0 max=5.0. step=0.1");
     _params->addParam( "Is Flatten",                &GlobalSettings::getInstance().isFlatten);
     
+    
+//    _scene->setState(1);
+//    _scene->createRibbon();
+//    _points.push_back(Vec3f(-200, -100, 100));
+//    _points.push_back(Vec3f(-120, 150, 50));
+//    _points.push_back(Vec3f(-30, 30, 0));
+//    _points.push_back(Vec3f(80, 0, -80));
+//    _points.push_back(Vec3f(-40, -80, -40));
+//    _points.push_back(Vec3f(0, 0, 0));
+    
+    _params->hide();
 }
 
 
@@ -143,7 +158,7 @@ void Calligraphy3DApp::reset() {
     
     _spline = BSpline3f( _points, 3, false, true );
     
-    for( float p = 0.1f; p < 0.9f; p += GlobalSettings::getInstance().splineGap ) {
+    for( float p = 0.1f; p < 0.99f; p += GlobalSettings::getInstance().splineGap ) {
         Vec3f pp = _spline.getPosition( p );
         Vec3f pd = _spline.getDerivative( p );
         _pointSpline.push_back(pp);
@@ -152,7 +167,6 @@ void Calligraphy3DApp::reset() {
     
     
     int n = _pointSpline.size();
-    _frames.clear();
     _frames.clear();
     _frames.resize( n );
     // Make the parallel transport frame
@@ -174,20 +188,26 @@ void Calligraphy3DApp::reset() {
     GlobalSettings::getInstance().points.clear();
     GlobalSettings::getInstance().pointsSpline.empty();
     GlobalSettings::getInstance().pointsSpline.clear();
+    GlobalSettings::getInstance().pointsNormal.empty();
+    GlobalSettings::getInstance().pointsNormal.clear();
     
     GlobalSettings::getInstance().pointsSpline = _pointSpline;
     for(int i=0; i<_pointSpline.size(); i++) {
         Vec3f yAxis0 = _frames[i].transformVec( Vec3f::xAxis() );
         GlobalSettings::getInstance().points.push_back(yAxis0);
+        Vec3f zAxis0 = _frames[i].transformVec( Vec3f::yAxis() );
+        GlobalSettings::getInstance().pointsNormal.push_back(zAxis0);
     }
     
-    _scene->updateRibbon();
+//    _scene->updateRibbon();
+    if(_state > 0) _scene->updateRibbon();
 }
 
 
 void Calligraphy3DApp::draw() {
 	// clear out the window with black
-	gl::clear( Color( 0, 0, 0 ) );
+	gl::clear( Color( 41/255.0, 41/255.0, 41/255.0 ) );
+
     _scene->render();
     _params->draw();
 }
@@ -205,6 +225,8 @@ void Calligraphy3DApp::clear() {
     GlobalSettings::getInstance().points.clear();
     GlobalSettings::getInstance().pointsSpline.empty();
     GlobalSettings::getInstance().pointsSpline.clear();
+    GlobalSettings::getInstance().pointsNormal.empty();
+    GlobalSettings::getInstance().pointsNormal.clear();
 }
 
 
@@ -220,7 +242,7 @@ void Calligraphy3DApp::keyDown( KeyEvent event ) {
         if(!_isRecording) {
             _isRecording = true;
             clear();
-            _scene->createRibbon();
+            if(_state>=1)_scene->createRibbon();
         }
     } else if(event.getChar() == 'n') {
         _scene->updateBrush();
@@ -231,6 +253,15 @@ void Calligraphy3DApp::keyDown( KeyEvent event ) {
         else _params->show();
     } else if(event.getChar() == 's') {
         GlobalSettings::getInstance().isInDark = !GlobalSettings::getInstance().isInDark;
+    } else if(event.getChar() == 'd') {
+        GlobalSettings::getInstance().showDepth = !GlobalSettings::getInstance().showDepth;
+    } else if(event.getChar() == 'l') {
+        _state++;
+        _scene->setState(_state);
+        if(_state == 1) {
+            _scene->createRibbon();
+            _needReset = true;
+        }
     }
 }
 

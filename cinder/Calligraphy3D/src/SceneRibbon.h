@@ -20,14 +20,18 @@
 #include "ViewRibbon.h"
 #include "ViewDrop.h"
 #include "ViewPost.h"
+#include "ViewBlur.h"
+#include "EffectComposer.h"
 
 using namespace bongiovi;
+using namespace bongiovi::post;
 using namespace ci;
 
 class SceneRibbon : public Scene {
 public:
     SceneRibbon(app::WindowRef);
     void                    render();
+    void                    renderWireFrame();
     void                    updateRibbon();
     void                    updateBrush();
     void                    createRibbon();
@@ -35,11 +39,14 @@ public:
     void                    clearAll();
     bool                    isDarkStyle = false;
     bool                    isStarted = false;
+    void                    initTextures();
+    void                    initViews();
+    void                    setState(int);
     
     
 private:
-    void                    _initTextures();
-    void                    _initViews();
+    bool                    _isTextureCreated;
+    int                     _state = 5;
     
     qtime::MovieGl          _movie;
     CameraOrtho*            _cameraStage;
@@ -52,13 +59,33 @@ private:
     vector<gl::TextureRef>  _brushes;
     vector<gl::TextureRef>  _drops;
     
-    
     ViewCopy*               _vBg;
     ViewPost*               _vPost;
     ViewRibbon*             _vRibbon;
     ViewDrop*               _vDrop;
     
+    EffectComposer*         _compBlur;
+    
     vector<ViewRibbon*>     _ribbons;
 };
 
 #endif /* defined(__Ribbons02__SceneRibbon__) */
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+

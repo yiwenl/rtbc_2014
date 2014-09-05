@@ -25,12 +25,13 @@ void ViewPost::_init() {
 }
 
 
-void ViewPost::render(gl::Texture stroke, gl::Texture vid, gl::TextureRef bg) {
+void ViewPost::render(gl::Texture stroke, gl::Texture vid, gl::TextureRef bg, bool addVideo) {
     shader->bind();
     shader->uniform("texture", 0);
     shader->uniform("textureVid", 1);
     shader->uniform("textureBg", 2);
     shader->uniform("dimension", Vec2f(1024.0f, 1024.0f));
+    shader->uniform("addVideo", addVideo);
     stroke.bind(0);
     vid.bind(1);
     bg->bind(2);

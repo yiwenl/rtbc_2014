@@ -19,7 +19,7 @@ class ViewPost : public View {
 public:
     ViewPost();
     ViewPost(string vsPath, string fsPath);
-    void                    render(gl::Texture, gl::Texture, gl::TextureRef);
+    void                    render(gl::Texture, gl::Texture, gl::TextureRef, bool);
     
 private:
     void                    _init();

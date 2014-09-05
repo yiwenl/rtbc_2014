@@ -23,6 +23,7 @@ public:
     ViewDrop(string vsPath, string fsPath, gl::TextureRef);
     void                    render();
     void                    render(InkDrop*, gl::TextureRef);
+    void                    render(InkDrop*, gl::TextureRef, int);
     int                     currframe = 0;
     
 private:

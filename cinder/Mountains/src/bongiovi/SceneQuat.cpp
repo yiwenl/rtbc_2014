@@ -65,7 +65,7 @@ void SceneQuat::update() {
     if(_currDiff.x == 0 && _currDiff.y == 0) _currDiff.x = _currDiff.y = .1;
 
     
-    Vec3f v = Vec3f(_currDiff.x, -_currDiff.y, 0.0f);
+    Vec3f v = Vec3f(_currDiff.x, -_currDiff.y * 0.0f, 0.0f);
     Vec3f zAxis = Vec3f::zAxis();
     Vec3f axis = Vec3f();
     axis = v.cross(zAxis);

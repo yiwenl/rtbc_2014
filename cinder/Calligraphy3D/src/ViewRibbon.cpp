@@ -92,3 +92,17 @@ void ViewRibbon::render(gl::TextureRef texture) {
     texture->unbind();
     shader->unbind();
 }
+
+
+void ViewRibbon::render(gl::TextureRef texture, int state) {
+    if(!mesh) return;
+    if(state == 0 || state == 4) {
+        shader->bind();
+        shader->uniform("texture", 0);
+    }
+    shader->uniform("isInDark", GlobalSettings::getInstance().isInDark);
+    texture->bind();
+    gl::draw(mesh);
+    texture->unbind();
+    if(state == 2 || state == 4) shader->unbind();
+}

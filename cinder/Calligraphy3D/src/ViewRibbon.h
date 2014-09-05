@@ -22,6 +22,7 @@ public:
     ViewRibbon(string vsPath, string fsPath);
     void                    render();
     void                    render(gl::TextureRef);
+    void                    render(gl::TextureRef, int);
     void                    update();
     int                     textureIndex;
     float                   theta;

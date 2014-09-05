@@ -33,8 +33,8 @@ t1408115601
 s374
 
 N/Applications/MAMP/htdocs/www/RTBC/cinder/Mountains/assets/shaders
-c0000000053EE301200000000000001DC
-t1408118802
+c0000000054047E0500000000000001DC
+t1409580549
 s476
 
 N/Applications/MAMP/htdocs/www/RTBC/cinder/Mountains/resources/CinderApp.icns
@@ -53,8 +53,8 @@ t1406125740
 s433
 
 N/Applications/MAMP/htdocs/www/RTBC/cinder/Mountains/src/MountainsApp.cpp
-c0000000053D22E2D000000000000037B
-t1406283309
+c0000000054047DC3000000000000037B
+t1409580483
 s891
 
 N/Applications/MAMP/htdocs/www/RTBC/cinder/Mountains/src/SceneMountain.cpp
@@ -158,9 +158,9 @@ t1405700593
 s1187
 
 N/Applications/MAMP/htdocs/www/RTBC/cinder/Mountains/src/bongiovi/SceneQuat.cpp
-c0000000053BD6E5E0000000000000645
-t1404923486
-s1605
+c0000000054047F00000000000000064C
+t1409580800
+s1612
 
 N/Applications/MAMP/htdocs/www/RTBC/cinder/Mountains/src/bongiovi/SceneQuat.h
 c000000005319F17700000000000002E4
@@ -218,7 +218,7 @@ t1406125471
 s301
 
 N/Applications/MAMP/htdocs/www/RTBC/cinder/Mountains/xcode/build/Debug/Mountains.app
-t1408118774
+t1409580779
 s102
 
 N/Applications/MAMP/htdocs/www/RTBC/cinder/Mountains/xcode/build/Debug/Mountains.app/Contents/Info.plist
@@ -226,8 +226,8 @@ t1408009637
 s1487
 
 N/Applications/MAMP/htdocs/www/RTBC/cinder/Mountains/xcode/build/Debug/Mountains.app/Contents/MacOS/Mountains
-t1408118222
-s3716172
+t1409580802
+s3716160
 
 N/Applications/MAMP/htdocs/www/RTBC/cinder/Mountains/xcode/build/Debug/Mountains.app/Contents/PkgInfo
 t1408009637
@@ -242,7 +242,7 @@ t1408115688
 s340
 
 N/Applications/MAMP/htdocs/www/RTBC/cinder/Mountains/xcode/build/Debug/Mountains.app/Contents/Resources/shaders
-t1408118802
+t1409580549
 s442
 
 N/Applications/MAMP/htdocs/www/RTBC/cinder/Mountains/xcode/build/Mountains.build/Debug/Mountains.build/Objects-normal/i386/EffectComposer.o
@@ -267,7 +267,7 @@ t1408116323
 s2292
 
 N/Applications/MAMP/htdocs/www/RTBC/cinder/Mountains/xcode/build/Mountains.build/Debug/Mountains.build/Objects-normal/i386/MountainsApp.o
-t1408116612
+t1409580518
 s2293164
 
 N/Applications/MAMP/htdocs/www/RTBC/cinder/Mountains/xcode/build/Mountains.build/Debug/Mountains.build/Objects-normal/i386/Scene.o
@@ -279,8 +279,8 @@ t1408118221
 s2216764
 
 N/Applications/MAMP/htdocs/www/RTBC/cinder/Mountains/xcode/build/Mountains.build/Debug/Mountains.build/Objects-normal/i386/SceneQuat.o
-t1408009675
-s145628
+t1409580801
+s145644
 
 N/Applications/MAMP/htdocs/www/RTBC/cinder/Mountains/xcode/build/Mountains.build/Debug/Mountains.build/Objects-normal/i386/Utils.o
 t1408009669
@@ -4789,7 +4789,7 @@ r0
 
 CCheck dependencies
 r0
-lSLF06#21%IDEActivityLogSection1@2#32"com.apple.dt.IDE.BuildLogSection18"Check dependencies18"Check dependencies28276292679eb941^cc7d6292679eb941^---0#1#1#--18"Check dependencies36"D00D4C59-AB40-4DD1-85D4-5C342626221D-
+lSLF06#21%IDEActivityLogSection1@2#32"com.apple.dt.IDE.BuildLogSection18"Check dependencies18"Check dependenciesee7ca780b6b4b941^fbcea780b6b4b941^---0#1#1#--18"Check dependencies36"71F5F100-E75F-4FD9-AE89-B30292B66FD9-
 
 CCompileC build/Mountains.build/Debug/Mountains.build/Objects-normal/i386/EffectComposer.o /Applications/MAMP/htdocs/www/RTBC/cinder/Mountains/src/bongiovi/EffectComposer.cpp normal i386 c++ com.apple.compilers.llvm.clang.1_0.compiler
 s429810236.060867
@@ -4865,8 +4865,8 @@ lSLF06#21%IDEActivityLogSection1@2#32"com.apple.dt.IDE.BuildLogSection86"Compile
 bC4F11C09-2CAF-4A2B-8299-BD3C445CA52E
 
 CCompileC build/Mountains.build/Debug/Mountains.build/Objects-normal/i386/MountainsApp.o /Applications/MAMP/htdocs/www/RTBC/cinder/Mountains/src/MountainsApp.cpp normal i386 c++ com.apple.compilers.llvm.clang.1_0.compiler
-s429809410.608151
-e429809412.556796
+s431273309.453570
+e431273318.340697
 r1
 xCompileC
 xbuild/Mountains.build/Debug/Mountains.build/Objects-normal/i386/MountainsApp.o
@@ -4896,8 +4896,8 @@ d/Applications/MAMP/htdocs/www/RTBC/cinder/Mountains/src/ViewSun.h
 d/Applications/MAMP/htdocs/www/RTBC/cinder/Mountains/src/ViewSSAO.h
 d/Applications/MAMP/htdocs/www/RTBC/cinder/Mountains/src/bongiovi/EffectComposer.h
 d/Applications/MAMP/htdocs/www/RTBC/cinder/Mountains/src/GlobalSettings.h
-lSLF06#21%IDEActivityLogSection1@2#32"com.apple.dt.IDE.BuildLogSection80"Compile /Applications/MAMP/htdocs/www/RTBC/cinder/Mountains/src/MountainsApp.cpp220"CompileC build/Mountains.build/Debug/Mountains.build/Objects-normal/i386/MountainsApp.o /Applications/MAMP/htdocs/www/RTBC/cinder/Mountains/src/MountainsApp.cpp normal i386 c++ com.apple.compilers.llvm.clang.1_0.compiler9acd9b025f9eb941^838a8e045f9eb941^---0#0#1#-19%DVTDocumentLocation2@79"file:///Applications/MAMP/htdocs/www/RTBC/cinder/Mountains/src/MountainsApp.cpp0000000000000000^3215"CompileC build/Mountains.build/Debug/Mountains.build/Objects-normal/i386/MountainsApp.o /Applications/MAMP/htdocs/www/RTBC/cinder/Mountains/src/MountainsApp.cpp normal i386 c++ com.apple.compilers.llvm.clang.1_0.compiler    cd /Applications/MAMP/htdocs/www/RTBC/cinder/Mountains/xcode    export LANG=en_US.US-ASCII    /Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/bin/clang -x c++ -arch i386 -fmessage-length=0 -fdiagnostics-show-note-include-stack -fmacro-backtrace-limit=0 -std=c++11 -stdlib=libc++ -Wno-trigraphs -fpascal-strings -O0 -Wno-missing-field-initializers -Wno-missing-prototypes -Wno-non-virtual-dtor -Wno-overloaded-virtual -Wno-exit-time-destructors -Wno-missing-braces -Wparentheses -Wswitch -Wno-unused-function -Wno-unused-label -Wno-unused-parameter -Wunused-variable -Wunused-value -Wno-empty-body -Wno-uninitialized -Wno-unknown-pragmas -Wno-shadow -Wno-four-char-constants -Wno-conversion -Wno-constant-conversion -Wno-int-conversion -Wno-bool-conversion -Wno-enum-conversion -Wno-shorten-64-to-32 -Wno-newline-eof -Wno-c++11-extensions -DDEBUG=1 -isysroot /Applications/Xcode.app/Contents/Developer/Platforms/MacOSX.platform/Developer/SDKs/MacOSX10.9.sdk -fasm-blocks -fstrict-aliasing -Wdeprecated-declarations -Winvalid-offsetof -mmacosx-version-min=10.7 -g -fvisibility-inlines-hidden -Wno-sign-conversion -iquote /Applications/MAMP/htdocs/www/RTBC/cinder/Mountains/xcode/build/Mountains.build/Debug/Mountains.build/Mountains-generated-files.hmap -I/Applications/MAMP/htdocs/www/RTBC/cinder/Mountains/xcode/build/Mountains.build/Debug/Mountains.build/Mountains-own-target-headers.hmap -I/Applications/MAMP/htdocs/www/RTBC/cinder/Mountains/xcode/build/Mountains.build/Debug/Mountains.build/Mountains-all-target-headers.hmap -iquote /Applications/MAMP/htdocs/www/RTBC/cinder/Mountains/xcode/build/Mountains.build/Debug/Mountains.build/Mountains-project-headers.hmap -iquote../../../../../../../../Users/yiwenl/Development/Cinder/include -iquote../include -I/Applications/MAMP/htdocs/www/RTBC/cinder/Mountains/xcode/build/Debug/include -I../../../../../../../../Users/yiwenl/Development/Cinder/boost -I/Applications/MAMP/htdocs/www/RTBC/cinder/Mountains/xcode/build/Mountains.build/Debug/Mountains.build/DerivedSources/i386 -I/Applications/MAMP/htdocs/www/RTBC/cinder/Mountains/xcode/build/Mountains.build/Debug/Mountains.build/DerivedSources -F/Applications/MAMP/htdocs/www/RTBC/cinder/Mountains/xcode/build/Debug -include /var/folders/2r/z8b3t_054ns3yvlbk8637rpr0000gn/C/com.apple.DeveloperTools/5.1.1-5B1008/Xcode/SharedPrecompiledHeaders/Mountains_Prefix-dkjgmqushxplmygdpoawvideqyij/Mountains_Prefix.pch -MMD -MT dependencies -MF /Applications/MAMP/htdocs/www/RTBC/cinder/Mountains/xcode/build/Mountains.build/Debug/Mountains.build/Objects-normal/i386/MountainsApp.d --serialize-diagnostics /Applications/MAMP/htdocs/www/RTBC/cinder/Mountains/xcode/build/Mountains.build/Debug/Mountains.build/Objects-normal/i386/MountainsApp.dia -c /Applications/MAMP/htdocs/www/RTBC/cinder/Mountains/src/MountainsApp.cpp -o /Applications/MAMP/htdocs/www/RTBC/cinder/Mountains/xcode/build/Mountains.build/Debug/Mountains.build/Objects-normal/i386/MountainsApp.o36"200881B2-113C-4090-83EA-1A9F268E8304-
-b492643AA-D68C-4D4A-9A38-48747A5BA20C
+lSLF06#21%IDEActivityLogSection1@2#32"com.apple.dt.IDE.BuildLogSection80"Compile /Applications/MAMP/htdocs/www/RTBC/cinder/Mountains/src/MountainsApp.cpp220"CompileC build/Mountains.build/Debug/Mountains.build/Objects-normal/i386/MountainsApp.o /Applications/MAMP/htdocs/www/RTBC/cinder/Mountains/src/MountainsApp.cpp normal i386 c++ com.apple.compilers.llvm.clang.1_0.compiler4359745db5b4b941^b9375766b5b4b941^---0#0#1#-19%DVTDocumentLocation2@79"file:///Applications/MAMP/htdocs/www/RTBC/cinder/Mountains/src/MountainsApp.cpp0000000000000000^3215"CompileC build/Mountains.build/Debug/Mountains.build/Objects-normal/i386/MountainsApp.o /Applications/MAMP/htdocs/www/RTBC/cinder/Mountains/src/MountainsApp.cpp normal i386 c++ com.apple.compilers.llvm.clang.1_0.compiler    cd /Applications/MAMP/htdocs/www/RTBC/cinder/Mountains/xcode    export LANG=en_US.US-ASCII    /Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/bin/clang -x c++ -arch i386 -fmessage-length=0 -fdiagnostics-show-note-include-stack -fmacro-backtrace-limit=0 -std=c++11 -stdlib=libc++ -Wno-trigraphs -fpascal-strings -O0 -Wno-missing-field-initializers -Wno-missing-prototypes -Wno-non-virtual-dtor -Wno-overloaded-virtual -Wno-exit-time-destructors -Wno-missing-braces -Wparentheses -Wswitch -Wno-unused-function -Wno-unused-label -Wno-unused-parameter -Wunused-variable -Wunused-value -Wno-empty-body -Wno-uninitialized -Wno-unknown-pragmas -Wno-shadow -Wno-four-char-constants -Wno-conversion -Wno-constant-conversion -Wno-int-conversion -Wno-bool-conversion -Wno-enum-conversion -Wno-shorten-64-to-32 -Wno-newline-eof -Wno-c++11-extensions -DDEBUG=1 -isysroot /Applications/Xcode.app/Contents/Developer/Platforms/MacOSX.platform/Developer/SDKs/MacOSX10.9.sdk -fasm-blocks -fstrict-aliasing -Wdeprecated-declarations -Winvalid-offsetof -mmacosx-version-min=10.7 -g -fvisibility-inlines-hidden -Wno-sign-conversion -iquote /Applications/MAMP/htdocs/www/RTBC/cinder/Mountains/xcode/build/Mountains.build/Debug/Mountains.build/Mountains-generated-files.hmap -I/Applications/MAMP/htdocs/www/RTBC/cinder/Mountains/xcode/build/Mountains.build/Debug/Mountains.build/Mountains-own-target-headers.hmap -I/Applications/MAMP/htdocs/www/RTBC/cinder/Mountains/xcode/build/Mountains.build/Debug/Mountains.build/Mountains-all-target-headers.hmap -iquote /Applications/MAMP/htdocs/www/RTBC/cinder/Mountains/xcode/build/Mountains.build/Debug/Mountains.build/Mountains-project-headers.hmap -iquote../../../../../../../../Users/yiwenl/Development/Cinder/include -iquote../include -I/Applications/MAMP/htdocs/www/RTBC/cinder/Mountains/xcode/build/Debug/include -I../../../../../../../../Users/yiwenl/Development/Cinder/boost -I/Applications/MAMP/htdocs/www/RTBC/cinder/Mountains/xcode/build/Mountains.build/Debug/Mountains.build/DerivedSources/i386 -I/Applications/MAMP/htdocs/www/RTBC/cinder/Mountains/xcode/build/Mountains.build/Debug/Mountains.build/DerivedSources -F/Applications/MAMP/htdocs/www/RTBC/cinder/Mountains/xcode/build/Debug -include /var/folders/2r/z8b3t_054ns3yvlbk8637rpr0000gn/C/com.apple.DeveloperTools/5.1.1-5B1008/Xcode/SharedPrecompiledHeaders/Mountains_Prefix-dkjgmqushxplmygdpoawvideqyij/Mountains_Prefix.pch -MMD -MT dependencies -MF /Applications/MAMP/htdocs/www/RTBC/cinder/Mountains/xcode/build/Mountains.build/Debug/Mountains.build/Objects-normal/i386/MountainsApp.d --serialize-diagnostics /Applications/MAMP/htdocs/www/RTBC/cinder/Mountains/xcode/build/Mountains.build/Debug/Mountains.build/Objects-normal/i386/MountainsApp.dia -c /Applications/MAMP/htdocs/www/RTBC/cinder/Mountains/src/MountainsApp.cpp -o /Applications/MAMP/htdocs/www/RTBC/cinder/Mountains/xcode/build/Mountains.build/Debug/Mountains.build/Objects-normal/i386/MountainsApp.o36"5688CD57-C152-4FC5-81F6-15417DA5DD43-
+bEEC7D25E-C1A0-4703-970D-4DEBBEC2F62F
 
 CCompileC build/Mountains.build/Debug/Mountains.build/Objects-normal/i386/Scene.o /Applications/MAMP/htdocs/www/RTBC/cinder/Mountains/src/bongiovi/Scene.cpp normal i386 c++ com.apple.compilers.llvm.clang.1_0.compiler
 s429794781.123333
@@ -4953,8 +4953,8 @@ lSLF06#21%IDEActivityLogSection1@2#32"com.apple.dt.IDE.BuildLogSection81"Compile
 bDA189663-418A-488A-9FFA-F3B6F3A4012C
 
 CCompileC build/Mountains.build/Debug/Mountains.build/Objects-normal/i386/SceneQuat.o /Applications/MAMP/htdocs/www/RTBC/cinder/Mountains/src/bongiovi/SceneQuat.cpp normal i386 c++ com.apple.compilers.llvm.clang.1_0.compiler
-s429702474.644923
-e429702475.755692
+s431273600.679109
+e431273601.704125
 r1
 xCompileC
 xbuild/Mountains.build/Debug/Mountains.build/Objects-normal/i386/SceneQuat.o
@@ -4965,8 +4965,8 @@ xc++
 xcom.apple.compilers.llvm.clang.1_0.compiler
 d/Applications/MAMP/htdocs/www/RTBC/cinder/Mountains/src/bongiovi/SceneQuat.cpp
 d/Applications/MAMP/htdocs/www/RTBC/cinder/Mountains/src/bongiovi/SceneQuat.h
-lSLF06#21%IDEActivityLogSection1@2#32"com.apple.dt.IDE.BuildLogSection86"Compile /Applications/MAMP/htdocs/www/RTBC/cinder/Mountains/src/bongiovi/SceneQuat.cpp223"CompileC build/Mountains.build/Debug/Mountains.build/Objects-normal/i386/SceneQuat.o /Applications/MAMP/htdocs/www/RTBC/cinder/Mountains/src/bongiovi/SceneQuat.cpp normal i386 c++ com.apple.compilers.llvm.clang.1_0.compilercf2ca54abd9cb941^8577c14bbd9cb941^---0#0#1#-19%DVTDocumentLocation2@85"file:///Applications/MAMP/htdocs/www/RTBC/cinder/Mountains/src/bongiovi/SceneQuat.cpp0000000000000000^3215"CompileC build/Mountains.build/Debug/Mountains.build/Objects-normal/i386/SceneQuat.o /Applications/MAMP/htdocs/www/RTBC/cinder/Mountains/src/bongiovi/SceneQuat.cpp normal i386 c++ com.apple.compilers.llvm.clang.1_0.compiler    cd /Applications/MAMP/htdocs/www/RTBC/cinder/Mountains/xcode    export LANG=en_US.US-ASCII    /Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/bin/clang -x c++ -arch i386 -fmessage-length=0 -fdiagnostics-show-note-include-stack -fmacro-backtrace-limit=0 -std=c++11 -stdlib=libc++ -Wno-trigraphs -fpascal-strings -O0 -Wno-missing-field-initializers -Wno-missing-prototypes -Wno-non-virtual-dtor -Wno-overloaded-virtual -Wno-exit-time-destructors -Wno-missing-braces -Wparentheses -Wswitch -Wno-unused-function -Wno-unused-label -Wno-unused-parameter -Wunused-variable -Wunused-value -Wno-empty-body -Wno-uninitialized -Wno-unknown-pragmas -Wno-shadow -Wno-four-char-constants -Wno-conversion -Wno-constant-conversion -Wno-int-conversion -Wno-bool-conversion -Wno-enum-conversion -Wno-shorten-64-to-32 -Wno-newline-eof -Wno-c++11-extensions -DDEBUG=1 -isysroot /Applications/Xcode.app/Contents/Developer/Platforms/MacOSX.platform/Developer/SDKs/MacOSX10.9.sdk -fasm-blocks -fstrict-aliasing -Wdeprecated-declarations -Winvalid-offsetof -mmacosx-version-min=10.7 -g -fvisibility-inlines-hidden -Wno-sign-conversion -iquote /Applications/MAMP/htdocs/www/RTBC/cinder/Mountains/xcode/build/Mountains.build/Debug/Mountains.build/Mountains-generated-files.hmap -I/Applications/MAMP/htdocs/www/RTBC/cinder/Mountains/xcode/build/Mountains.build/Debug/Mountains.build/Mountains-own-target-headers.hmap -I/Applications/MAMP/htdocs/www/RTBC/cinder/Mountains/xcode/build/Mountains.build/Debug/Mountains.build/Mountains-all-target-headers.hmap -iquote /Applications/MAMP/htdocs/www/RTBC/cinder/Mountains/xcode/build/Mountains.build/Debug/Mountains.build/Mountains-project-headers.hmap -iquote../../../../../../../../Users/yiwenl/Development/Cinder/include -iquote../include -I/Applications/MAMP/htdocs/www/RTBC/cinder/Mountains/xcode/build/Debug/include -I../../../../../../../../Users/yiwenl/Development/Cinder/boost -I/Applications/MAMP/htdocs/www/RTBC/cinder/Mountains/xcode/build/Mountains.build/Debug/Mountains.build/DerivedSources/i386 -I/Applications/MAMP/htdocs/www/RTBC/cinder/Mountains/xcode/build/Mountains.build/Debug/Mountains.build/DerivedSources -F/Applications/MAMP/htdocs/www/RTBC/cinder/Mountains/xcode/build/Debug -include /var/folders/2r/z8b3t_054ns3yvlbk8637rpr0000gn/C/com.apple.DeveloperTools/5.1.1-5B1008/Xcode/SharedPrecompiledHeaders/Mountains_Prefix-dkjgmqushxplmygdpoawvideqyij/Mountains_Prefix.pch -MMD -MT dependencies -MF /Applications/MAMP/htdocs/www/RTBC/cinder/Mountains/xcode/build/Mountains.build/Debug/Mountains.build/Objects-normal/i386/SceneQuat.d --serialize-diagnostics /Applications/MAMP/htdocs/www/RTBC/cinder/Mountains/xcode/build/Mountains.build/Debug/Mountains.build/Objects-normal/i386/SceneQuat.dia -c /Applications/MAMP/htdocs/www/RTBC/cinder/Mountains/src/bongiovi/SceneQuat.cpp -o /Applications/MAMP/htdocs/www/RTBC/cinder/Mountains/xcode/build/Mountains.build/Debug/Mountains.build/Objects-normal/i386/SceneQuat.o36"AF52D4AB-6038-46D8-B368-482A032A30C6-
-bC4F11C09-2CAF-4A2B-8299-BD3C445CA52E
+lSLF06#21%IDEActivityLogSection1@2#32"com.apple.dt.IDE.BuildLogSection86"Compile /Applications/MAMP/htdocs/www/RTBC/cinder/Mountains/src/bongiovi/SceneQuat.cpp223"CompileC build/Mountains.build/Debug/Mountains.build/Objects-normal/i386/SceneQuat.o /Applications/MAMP/htdocs/www/RTBC/cinder/Mountains/src/bongiovi/SceneQuat.cpp normal i386 c++ com.apple.compilers.llvm.clang.1_0.compiler35eead80b6b4b941^4242b481b6b4b941^---0#0#1#-19%DVTDocumentLocation2@85"file:///Applications/MAMP/htdocs/www/RTBC/cinder/Mountains/src/bongiovi/SceneQuat.cpp0000000000000000^3215"CompileC build/Mountains.build/Debug/Mountains.build/Objects-normal/i386/SceneQuat.o /Applications/MAMP/htdocs/www/RTBC/cinder/Mountains/src/bongiovi/SceneQuat.cpp normal i386 c++ com.apple.compilers.llvm.clang.1_0.compiler    cd /Applications/MAMP/htdocs/www/RTBC/cinder/Mountains/xcode    export LANG=en_US.US-ASCII    /Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/bin/clang -x c++ -arch i386 -fmessage-length=0 -fdiagnostics-show-note-include-stack -fmacro-backtrace-limit=0 -std=c++11 -stdlib=libc++ -Wno-trigraphs -fpascal-strings -O0 -Wno-missing-field-initializers -Wno-missing-prototypes -Wno-non-virtual-dtor -Wno-overloaded-virtual -Wno-exit-time-destructors -Wno-missing-braces -Wparentheses -Wswitch -Wno-unused-function -Wno-unused-label -Wno-unused-parameter -Wunused-variable -Wunused-value -Wno-empty-body -Wno-uninitialized -Wno-unknown-pragmas -Wno-shadow -Wno-four-char-constants -Wno-conversion -Wno-constant-conversion -Wno-int-conversion -Wno-bool-conversion -Wno-enum-conversion -Wno-shorten-64-to-32 -Wno-newline-eof -Wno-c++11-extensions -DDEBUG=1 -isysroot /Applications/Xcode.app/Contents/Developer/Platforms/MacOSX.platform/Developer/SDKs/MacOSX10.9.sdk -fasm-blocks -fstrict-aliasing -Wdeprecated-declarations -Winvalid-offsetof -mmacosx-version-min=10.7 -g -fvisibility-inlines-hidden -Wno-sign-conversion -iquote /Applications/MAMP/htdocs/www/RTBC/cinder/Mountains/xcode/build/Mountains.build/Debug/Mountains.build/Mountains-generated-files.hmap -I/Applications/MAMP/htdocs/www/RTBC/cinder/Mountains/xcode/build/Mountains.build/Debug/Mountains.build/Mountains-own-target-headers.hmap -I/Applications/MAMP/htdocs/www/RTBC/cinder/Mountains/xcode/build/Mountains.build/Debug/Mountains.build/Mountains-all-target-headers.hmap -iquote /Applications/MAMP/htdocs/www/RTBC/cinder/Mountains/xcode/build/Mountains.build/Debug/Mountains.build/Mountains-project-headers.hmap -iquote../../../../../../../../Users/yiwenl/Development/Cinder/include -iquote../include -I/Applications/MAMP/htdocs/www/RTBC/cinder/Mountains/xcode/build/Debug/include -I../../../../../../../../Users/yiwenl/Development/Cinder/boost -I/Applications/MAMP/htdocs/www/RTBC/cinder/Mountains/xcode/build/Mountains.build/Debug/Mountains.build/DerivedSources/i386 -I/Applications/MAMP/htdocs/www/RTBC/cinder/Mountains/xcode/build/Mountains.build/Debug/Mountains.build/DerivedSources -F/Applications/MAMP/htdocs/www/RTBC/cinder/Mountains/xcode/build/Debug -include /var/folders/2r/z8b3t_054ns3yvlbk8637rpr0000gn/C/com.apple.DeveloperTools/5.1.1-5B1008/Xcode/SharedPrecompiledHeaders/Mountains_Prefix-dkjgmqushxplmygdpoawvideqyij/Mountains_Prefix.pch -MMD -MT dependencies -MF /Applications/MAMP/htdocs/www/RTBC/cinder/Mountains/xcode/build/Mountains.build/Debug/Mountains.build/Objects-normal/i386/SceneQuat.d --serialize-diagnostics /Applications/MAMP/htdocs/www/RTBC/cinder/Mountains/xcode/build/Mountains.build/Debug/Mountains.build/Objects-normal/i386/SceneQuat.dia -c /Applications/MAMP/htdocs/www/RTBC/cinder/Mountains/src/bongiovi/SceneQuat.cpp -o /Applications/MAMP/htdocs/www/RTBC/cinder/Mountains/xcode/build/Mountains.build/Debug/Mountains.build/Objects-normal/i386/SceneQuat.o36"9C73BD89-56A2-46C6-92BF-39AC470CC996-
+bA4F0A675-CC26-4E39-A44F-2F571E8DAF66
 
 CCompileC build/Mountains.build/Debug/Mountains.build/Objects-normal/i386/Utils.o /Applications/MAMP/htdocs/www/RTBC/cinder/Mountains/src/bongiovi/Utils.cpp normal i386 c++ com.apple.compilers.llvm.clang.1_0.compiler
 s429702463.900255
@@ -5172,14 +5172,14 @@ lSLF06#21%IDEActivityLogSection1@2#32"com.apple.dt.IDE.BuildLogSection56"Copy bu
 b82F2F01D-1236-4C04-80A8-6D1E262D7EE4
 
 CCpResource /Applications/MAMP/htdocs/www/RTBC/cinder/Mountains/assets/shaders build/Debug/Mountains.app/Contents/Resources/shaders
-s429811602.384624
-e429811602.387386
+s431273349.433530
+e431273349.436050
 r1
 xCpResource
 x/Applications/MAMP/htdocs/www/RTBC/cinder/Mountains/assets/shaders
 xbuild/Debug/Mountains.app/Contents/Resources/shaders
-lSLF06#21%IDEActivityLogSection1@2#32"com.apple.dt.IDE.BuildLogSection57"Copy build/Debug/Mountains.app/Contents/Resources/shaders130"CpResource /Applications/MAMP/htdocs/www/RTBC/cinder/Mountains/assets/shaders build/Debug/Mountains.app/Contents/Resources/shaders2f866292679eb941^412c6392679eb941^---0#0#1#-19%DVTDocumentLocation2@118"file:///Applications/MAMP/htdocs/www/RTBC/cinder/Mountains/xcode/build/Debug/Mountains.app/Contents/Resources/shaders/0000000000000000^478"CpResource /Applications/MAMP/htdocs/www/RTBC/cinder/Mountains/assets/shaders build/Debug/Mountains.app/Contents/Resources/shaders    cd /Applications/MAMP/htdocs/www/RTBC/cinder/Mountains/xcode    builtin-copy -exclude .DS_Store -exclude CVS -exclude .svn -exclude .git -exclude .hg -resolve-src-symlinks /Applications/MAMP/htdocs/www/RTBC/cinder/Mountains/assets/shaders /Applications/MAMP/htdocs/www/RTBC/cinder/Mountains/xcode/build/Debug/Mountains.app/Contents/Resources36"D6C76767-CDEC-4D7A-AD48-03EA04B48181-
-b181C55DD-BEEC-49D4-BC83-BD290BCA24B8
+lSLF06#21%IDEActivityLogSection1@2#32"com.apple.dt.IDE.BuildLogSection57"Copy build/Debug/Mountains.app/Contents/Resources/shaders130"CpResource /Applications/MAMP/htdocs/www/RTBC/cinder/Mountains/assets/shaders build/Debug/Mountains.app/Contents/Resources/shadersd1076f85b5b4b941^a1a16f85b5b4b941^---0#0#1#-19%DVTDocumentLocation2@118"file:///Applications/MAMP/htdocs/www/RTBC/cinder/Mountains/xcode/build/Debug/Mountains.app/Contents/Resources/shaders/0000000000000000^478"CpResource /Applications/MAMP/htdocs/www/RTBC/cinder/Mountains/assets/shaders build/Debug/Mountains.app/Contents/Resources/shaders    cd /Applications/MAMP/htdocs/www/RTBC/cinder/Mountains/xcode    builtin-copy -exclude .DS_Store -exclude CVS -exclude .svn -exclude .git -exclude .hg -resolve-src-symlinks /Applications/MAMP/htdocs/www/RTBC/cinder/Mountains/assets/shaders /Applications/MAMP/htdocs/www/RTBC/cinder/Mountains/xcode/build/Debug/Mountains.app/Contents/Resources36"01B495AB-C1D5-4C53-B805-3B6E72E5AAC3-
+bF1EBB33A-654B-410F-B023-0DA8D959B76A
 
 CCpResource /Applications/MAMP/htdocs/www/RTBC/cinder/Mountains/resources/CinderApp.icns build/Debug/Mountains.app/Contents/Resources/CinderApp.icns
 s427818501.643905
@@ -5192,8 +5192,8 @@ lSLF06#21%IDEActivityLogSection1@2#32"com.apple.dt.IDE.BuildLogSection64"Copy bu
 b59C25517-A5C9-4459-BD00-913B1E5DBA37
 
 CLd /Applications/MAMP/htdocs/www/RTBC/cinder/Mountains/xcode/build/Debug/Mountains.app/Contents/MacOS/Mountains normal i386
-s429811021.594883
-e429811022.442761
+s431273601.706850
+e431273602.536157
 r1
 xLd
 x/Applications/MAMP/htdocs/www/RTBC/cinder/Mountains/xcode/build/Debug/Mountains.app/Contents/MacOS/Mountains
@@ -5231,13 +5231,6 @@ d/Applications/Xcode.app/Contents/Developer/Platforms/MacOSX.platform/Developer/
 d/Applications/Xcode.app/Contents/Developer/Platforms/MacOSX.platform/Developer/SDKs/MacOSX10.9.sdk/usr/lib/libSystem.dylib
 d/Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/lib/clang/5.1/lib/darwin/libclang_rt.eprintf.a
 d/Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/lib/clang/5.1/lib/darwin/libclang_rt.osx.a
-d/Applications/Xcode.app/Contents/Developer/Platforms/MacOSX.platform/Developer/SDKs/MacOSX10.9.sdk/System/Library/Frameworks/AppKit.framework/AppKit
-d/Applications/Xcode.app/Contents/Developer/Platforms/MacOSX.platform/Developer/SDKs/MacOSX10.9.sdk/System/Library/Frameworks/CoreData.framework/CoreData
-d/Applications/Xcode.app/Contents/Developer/Platforms/MacOSX.platform/Developer/SDKs/MacOSX10.9.sdk/System/Library/Frameworks/OpenGL.framework/Versions/A/Libraries/libGLU.dylib
-d/Applications/Xcode.app/Contents/Developer/Platforms/MacOSX.platform/Developer/SDKs/MacOSX10.9.sdk/System/Library/Frameworks/OpenGL.framework/Versions/A/Libraries/libGL.dylib
-d/Applications/Xcode.app/Contents/Developer/Platforms/MacOSX.platform/Developer/SDKs/MacOSX10.9.sdk/System/Library/Frameworks/Accelerate.framework/Versions/A/Frameworks/vImage.framework/Versions/A/vImage
-d/Applications/Xcode.app/Contents/Developer/Platforms/MacOSX.platform/Developer/SDKs/MacOSX10.9.sdk/System/Library/Frameworks/Accelerate.framework/Versions/A/Frameworks/vecLib.framework/Versions/A/vecLib
-d/Applications/Xcode.app/Contents/Developer/Platforms/MacOSX.platform/Developer/SDKs/MacOSX10.9.sdk/System/Library/Frameworks/Accelerate.framework/Versions/A/Frameworks/vecLib.framework/Versions/A/libvDSP.dylib
 d/Applications/Xcode.app/Contents/Developer/Platforms/MacOSX.platform/Developer/SDKs/MacOSX10.9.sdk/usr/lib/system/libcache.dylib
 d/Applications/Xcode.app/Contents/Developer/Platforms/MacOSX.platform/Developer/SDKs/MacOSX10.9.sdk/usr/lib/system/libcommonCrypto.dylib
 d/Applications/Xcode.app/Contents/Developer/Platforms/MacOSX.platform/Developer/SDKs/MacOSX10.9.sdk/usr/lib/system/libcompiler_rt.dylib
@@ -5267,11 +5260,18 @@ d/Applications/Xcode.app/Contents/Developer/Platforms/MacOSX.platform/Developer/
 d/Applications/Xcode.app/Contents/Developer/Platforms/MacOSX.platform/Developer/SDKs/MacOSX10.9.sdk/usr/lib/system/libunc.dylib
 d/Applications/Xcode.app/Contents/Developer/Platforms/MacOSX.platform/Developer/SDKs/MacOSX10.9.sdk/usr/lib/system/libunwind.dylib
 d/Applications/Xcode.app/Contents/Developer/Platforms/MacOSX.platform/Developer/SDKs/MacOSX10.9.sdk/usr/lib/system/libxpc.dylib
-d/Applications/Xcode.app/Contents/Developer/Platforms/MacOSX.platform/Developer/SDKs/MacOSX10.9.sdk/System/Library/Frameworks/ApplicationServices.framework/ApplicationServices
-d/Applications/Xcode.app/Contents/Developer/Platforms/MacOSX.platform/Developer/SDKs/MacOSX10.9.sdk/System/Library/Frameworks/Foundation.framework/Foundation
+d/Applications/Xcode.app/Contents/Developer/Platforms/MacOSX.platform/Developer/SDKs/MacOSX10.9.sdk/System/Library/Frameworks/OpenGL.framework/Versions/A/Libraries/libGLU.dylib
+d/Applications/Xcode.app/Contents/Developer/Platforms/MacOSX.platform/Developer/SDKs/MacOSX10.9.sdk/System/Library/Frameworks/OpenGL.framework/Versions/A/Libraries/libGL.dylib
+d/Applications/Xcode.app/Contents/Developer/Platforms/MacOSX.platform/Developer/SDKs/MacOSX10.9.sdk/System/Library/Frameworks/Accelerate.framework/Versions/A/Frameworks/vImage.framework/Versions/A/vImage
+d/Applications/Xcode.app/Contents/Developer/Platforms/MacOSX.platform/Developer/SDKs/MacOSX10.9.sdk/System/Library/Frameworks/Accelerate.framework/Versions/A/Frameworks/vecLib.framework/Versions/A/vecLib
+d/Applications/Xcode.app/Contents/Developer/Platforms/MacOSX.platform/Developer/SDKs/MacOSX10.9.sdk/System/Library/Frameworks/Accelerate.framework/Versions/A/Frameworks/vecLib.framework/Versions/A/libvDSP.dylib
+d/Applications/Xcode.app/Contents/Developer/Platforms/MacOSX.platform/Developer/SDKs/MacOSX10.9.sdk/System/Library/Frameworks/AppKit.framework/AppKit
+d/Applications/Xcode.app/Contents/Developer/Platforms/MacOSX.platform/Developer/SDKs/MacOSX10.9.sdk/System/Library/Frameworks/CoreData.framework/CoreData
 d/Applications/Xcode.app/Contents/Developer/Platforms/MacOSX.platform/Developer/SDKs/MacOSX10.9.sdk/System/Library/Frameworks/Accelerate.framework/Versions/A/Frameworks/vecLib.framework/Versions/A/libvMisc.dylib
 d/Applications/Xcode.app/Contents/Developer/Platforms/MacOSX.platform/Developer/SDKs/MacOSX10.9.sdk/System/Library/Frameworks/Accelerate.framework/Versions/A/Frameworks/vecLib.framework/Versions/A/libLAPACK.dylib
 d/Applications/Xcode.app/Contents/Developer/Platforms/MacOSX.platform/Developer/SDKs/MacOSX10.9.sdk/System/Library/Frameworks/Accelerate.framework/Versions/A/Frameworks/vecLib.framework/Versions/A/libBLAS.dylib
+d/Applications/Xcode.app/Contents/Developer/Platforms/MacOSX.platform/Developer/SDKs/MacOSX10.9.sdk/System/Library/Frameworks/ApplicationServices.framework/ApplicationServices
+d/Applications/Xcode.app/Contents/Developer/Platforms/MacOSX.platform/Developer/SDKs/MacOSX10.9.sdk/System/Library/Frameworks/Foundation.framework/Foundation
 d/Applications/Xcode.app/Contents/Developer/Platforms/MacOSX.platform/Developer/SDKs/MacOSX10.9.sdk/System/Library/Frameworks/CoreGraphics.framework/CoreGraphics
 d/Applications/Xcode.app/Contents/Developer/Platforms/MacOSX.platform/Developer/SDKs/MacOSX10.9.sdk/System/Library/Frameworks/CoreText.framework/CoreText
 d/Applications/Xcode.app/Contents/Developer/Platforms/MacOSX.platform/Developer/SDKs/MacOSX10.9.sdk/System/Library/Frameworks/ImageIO.framework/ImageIO
@@ -5293,8 +5293,8 @@ d/Applications/Xcode.app/Contents/Developer/Platforms/MacOSX.platform/Developer/
 d/Applications/Xcode.app/Contents/Developer/Platforms/MacOSX.platform/Developer/SDKs/MacOSX10.9.sdk/System/Library/Frameworks/CoreServices.framework/Versions/A/Frameworks/AE.framework/Versions/A/AE
 d/Applications/Xcode.app/Contents/Developer/Platforms/MacOSX.platform/Developer/SDKs/MacOSX10.9.sdk/System/Library/Frameworks/CoreServices.framework/Versions/A/Frameworks/LaunchServices.framework/Versions/A/LaunchServices
 d/Applications/Xcode.app/Contents/Developer/Platforms/MacOSX.platform/Developer/SDKs/MacOSX10.9.sdk/System/Library/Frameworks/CoreServices.framework/Versions/A/Frameworks/DictionaryServices.framework/Versions/A/DictionaryServices
-lSLF06#21%IDEActivityLogSection1@2#32"com.apple.dt.IDE.BuildLogSection113"Link /Applications/MAMP/htdocs/www/RTBC/cinder/Mountains/xcode/build/Debug/Mountains.app/Contents/MacOS/Mountains65"Ld build/Debug/Mountains.app/Contents/MacOS/Mountains normal i3866459984d659eb941^d559714e659eb941^---0#0#1#--1277"Ld build/Debug/Mountains.app/Contents/MacOS/Mountains normal i386    cd /Applications/MAMP/htdocs/www/RTBC/cinder/Mountains/xcode    export MACOSX_DEPLOYMENT_TARGET=10.7    /Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/bin/clang++ -arch i386 -isysroot /Applications/Xcode.app/Contents/Developer/Platforms/MacOSX.platform/Developer/SDKs/MacOSX10.9.sdk -L/Applications/MAMP/htdocs/www/RTBC/cinder/Mountains/xcode/build/Debug -F/Applications/MAMP/htdocs/www/RTBC/cinder/Mountains/xcode/build/Debug -filelist /Applications/MAMP/htdocs/www/RTBC/cinder/Mountains/xcode/build/Mountains.build/Debug/Mountains.build/Objects-normal/i386/Mountains.LinkFileList -mmacosx-version-min=10.7 -dead_strip ../../../../../../../../Users/yiwenl/Development/Cinder/lib/libcinder_d.a -stdlib=libc++ -framework Cocoa -framework OpenGL -framework CoreVideo -framework QTKit -framework Accelerate -framework AudioToolbox -framework AudioUnit -framework CoreAudio -Xlinker -dependency_info -Xlinker /Applications/MAMP/htdocs/www/RTBC/cinder/Mountains/xcode/build/Mountains.build/Debug/Mountains.build/Objects-normal/i386/Mountains_dependency_info.dat -o /Applications/MAMP/htdocs/www/RTBC/cinder/Mountains/xcode/build/Debug/Mountains.app/Contents/MacOS/Mountains36"3CFC1693-34F0-46E4-BC49-5A45CFC3363C-
-bDA189663-418A-488A-9FFA-F3B6F3A4012C
+lSLF06#21%IDEActivityLogSection1@2#32"com.apple.dt.IDE.BuildLogSection113"Link /Applications/MAMP/htdocs/www/RTBC/cinder/Mountains/xcode/build/Debug/Mountains.app/Contents/MacOS/Mountains65"Ld build/Debug/Mountains.app/Contents/MacOS/Mountains normal i3864303b581b6b4b941^0b428982b6b4b941^---0#0#1#--1277"Ld build/Debug/Mountains.app/Contents/MacOS/Mountains normal i386    cd /Applications/MAMP/htdocs/www/RTBC/cinder/Mountains/xcode    export MACOSX_DEPLOYMENT_TARGET=10.7    /Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/bin/clang++ -arch i386 -isysroot /Applications/Xcode.app/Contents/Developer/Platforms/MacOSX.platform/Developer/SDKs/MacOSX10.9.sdk -L/Applications/MAMP/htdocs/www/RTBC/cinder/Mountains/xcode/build/Debug -F/Applications/MAMP/htdocs/www/RTBC/cinder/Mountains/xcode/build/Debug -filelist /Applications/MAMP/htdocs/www/RTBC/cinder/Mountains/xcode/build/Mountains.build/Debug/Mountains.build/Objects-normal/i386/Mountains.LinkFileList -mmacosx-version-min=10.7 -dead_strip ../../../../../../../../Users/yiwenl/Development/Cinder/lib/libcinder_d.a -stdlib=libc++ -framework Cocoa -framework OpenGL -framework CoreVideo -framework QTKit -framework Accelerate -framework AudioToolbox -framework AudioUnit -framework CoreAudio -Xlinker -dependency_info -Xlinker /Applications/MAMP/htdocs/www/RTBC/cinder/Mountains/xcode/build/Mountains.build/Debug/Mountains.build/Objects-normal/i386/Mountains_dependency_info.dat -o /Applications/MAMP/htdocs/www/RTBC/cinder/Mountains/xcode/build/Debug/Mountains.app/Contents/MacOS/Mountains36"BB4DD437-EEF0-485B-AAAF-B4E78812A413-
+bA4F0A675-CC26-4E39-A44F-2F571E8DAF66
 
 CProcessInfoPlistFile /Applications/MAMP/htdocs/www/RTBC/cinder/Mountains/xcode/build/Debug/Mountains.app/Contents/Info.plist /Applications/MAMP/htdocs/www/RTBC/cinder/Mountains/xcode/Info.plist
 s429702437.703977
@@ -6925,11 +6925,11 @@ lSLF06#21%IDEActivityLogSection1@2#32"com.apple.dt.IDE.BuildLogSection31"Precomp
 bB9A64207-188A-403B-9E0C-44416DD18B93
 
 CTouch /Applications/MAMP/htdocs/www/RTBC/cinder/Mountains/xcode/build/Debug/Mountains.app
-s429811602.403139
-e429811602.406944
+s431273602.537142
+e431273602.540828
 r1
 xTouch
 x/Applications/MAMP/htdocs/www/RTBC/cinder/Mountains/xcode/build/Debug/Mountains.app
-lSLF06#21%IDEActivityLogSection1@2#32"com.apple.dt.IDE.BuildLogSection89"Touch /Applications/MAMP/htdocs/www/RTBC/cinder/Mountains/xcode/build/Debug/Mountains.app31"Touch build/Debug/Mountains.appff3e6792679eb941^662e6892679eb941^---0#0#1#--203"Touch build/Debug/Mountains.app    cd /Applications/MAMP/htdocs/www/RTBC/cinder/Mountains/xcode    /usr/bin/touch -c /Applications/MAMP/htdocs/www/RTBC/cinder/Mountains/xcode/build/Debug/Mountains.app36"976B1FE0-C8B9-4945-8C8D-61558AE6469E-
-b181C55DD-BEEC-49D4-BC83-BD290BCA24B8
+lSLF06#21%IDEActivityLogSection1@2#32"com.apple.dt.IDE.BuildLogSection89"Touch /Applications/MAMP/htdocs/www/RTBC/cinder/Mountains/xcode/build/Debug/Mountains.app31"Touch build/Debug/Mountains.app3b8c8982b6b4b941^ef758a82b6b4b941^---0#0#1#--203"Touch build/Debug/Mountains.app    cd /Applications/MAMP/htdocs/www/RTBC/cinder/Mountains/xcode    /usr/bin/touch -c /Applications/MAMP/htdocs/www/RTBC/cinder/Mountains/xcode/build/Debug/Mountains.app36"F3851D14-2035-468A-BD77-75188EE65A0B-
+bA4F0A675-CC26-4E39-A44F-2F571E8DAF66
 

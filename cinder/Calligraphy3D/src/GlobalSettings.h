@@ -34,10 +34,12 @@ class GlobalSettings {
     float   ribbonWidth                 = 30.0f;
     bool    isFlatten                   = false;
     bool    isInDark                    = false;
+    bool    showDepth                   = false;
     
     
     vector<Vec3f>       points;
     vector<Vec3f>       pointsSpline;
+    vector<Vec3f>       pointsNormal;
     vector<InkDrop*>   inkDrops;
     
     private :

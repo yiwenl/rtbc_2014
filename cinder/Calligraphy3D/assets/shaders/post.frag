@@ -2,6 +2,7 @@ uniform sampler2D       texture;
 uniform sampler2DRect   textureVid;
 uniform sampler2D       textureBg;
 uniform vec2            dimension;
+uniform bool            addVideo;
 
 
 float overlay(float a, float b) {
@@ -25,12 +26,12 @@ void main(void) {
     vec2 texCoordVid    = texCoord * dimension;
     
     vec4 colorStroke    = texture2D(texture, texCoord);
-    vec4 colorVideo     = texture2DRect(textureVid, texCoordVid);
+    vec4 colorVideo     = addVideo ? texture2DRect(textureVid, texCoordVid) : vec4(1.0);
     vec4 colorBg        = texture2D(textureBg, texCoord);
     colorVideo.rgb      = overlay(colorVideo.rgb, colorBg.rgb);
     
     
     gl_FragColor        = colorStroke * colorVideo;
-//    gl_FragColor.rgb    = overlay(gl_FragColor.rgb, colorBg.rgb);
+//    gl_FragColor.rgb    = overlay(gl_FragColor.rgb, colorBg.rgb);l
 //    gl_FragColor.rgb    = overlay(colorBg.rgb, gl_FragColor.rgb);
 }

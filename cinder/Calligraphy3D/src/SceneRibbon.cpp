@@ -14,59 +14,64 @@ using namespace ci;
 using namespace bongiovi::utils;
 
 SceneRibbon::SceneRibbon(app::WindowRef window) : Scene(window) {
-    _cameraStage    = new CameraOrtho();
-    _cameraStage->setOrtho( 0, ci::app::getWindowWidth(), -ci::app::getWindowHeight(), 0, -1000, 1000 );
-    
     _ribbons.clear();
     _ribbons.empty();
     
-    _initTextures();
-    _initViews();
+    initTextures();
+    initViews();
+
 }
 
 
-void SceneRibbon::_initTextures() {
+void SceneRibbon::setState(int index) {
+    if(_state >= index) return;
+    
+    _state = index;
+    if(_state == 1) {
+//        initTextures();
+//        initViews();
+    }
+}
+
+void SceneRibbon::initTextures() {
     _texBg          = Utils::createTexture("common/floor.jpg");
     _texBgDark      = Utils::createTexture("common/floorBlue.jpg");
-    _texDrop        = Utils::createTexture("drops/drop01.png");
     
     _movie = qtime::MovieGl( cinder::app::loadResource("videos/bw.mp4"));
     _movie.setLoop();
     _movie.play();
     
     gl::Fbo::Format format;
-    format.enableColorBuffer( true, 2 );
-    format.setColorInternalFormat( GL_RGBA32F_ARB );
     format.setMinFilter(GL_LINEAR);
     format.setMagFilter(GL_LINEAR);
+    format.setSamples(4);
+    format.enableMipmapping();
     
-    int size        = 1024;
-    _strokes        = new gl::Fbo(size*2, size, format);
+    int size        = 1024 * 2;
+    _strokes        = new gl::Fbo(size, size, format);
     _strokes->bindFramebuffer();
     gl::clear();
     _strokes->unbindFramebuffer();
     
-    gl::TextureRef brush0 = Utils::createTexture("brushes/brush0.png");
-    gl::TextureRef brush1 = Utils::createTexture("brushes/brush1.png");
-    gl::TextureRef brush2 = Utils::createTexture("brushes/brush2.png");
-    gl::TextureRef brush3 = Utils::createTexture("brushes/brush3.png");
-    gl::TextureRef brush4 = Utils::createTexture("brushes/brush4.png");
-    gl::TextureRef brush5 = Utils::createTexture("brushes/brush5.png");
     
-    gl::TextureRef drop0 = Utils::createTexture("drops/drop01.png");
-    gl::TextureRef drop1 = Utils::createTexture("drops/drop02.png");
-    gl::TextureRef drop2 = Utils::createTexture("drops/drop03.png");
-    gl::TextureRef drop3 = Utils::createTexture("drops/drop04.png");
-    gl::TextureRef drop4 = Utils::createTexture("drops/drop05.png");
-    gl::TextureRef drop5 = Utils::createTexture("drops/drop06.png");
+    for(int i=0; i<12; i++) {
+        string path = "brushes/brush" + std::to_string(i) + ".png";
+        gl::TextureRef brush = Utils::createTexture(path);
+        _brushes.push_back(brush);
+    }
 
-    _brushes    = vector<gl::TextureRef>{brush0,brush1,brush2,brush3,brush4,brush5};
-    _drops      = vector<gl::TextureRef>{drop0,drop1,drop2,drop3,drop4,drop5};
+    
+    for(int i=1; i<=6; i++) {
+        string path = "drops/drop0" + std::to_string(i) + ".png";
+        gl::TextureRef drop = Utils::createTexture(path);
+        _drops.push_back(drop);
+    }
+
     updateBrush();
 }
 
 
-void SceneRibbon::_initViews() {
+void SceneRibbon::initViews() {
     _vBg            = new ViewCopy();
     _vPost          = new ViewPost();
     _vDrop          = new ViewDrop();
@@ -103,8 +108,15 @@ void SceneRibbon::clearAll() {
 
 
 void SceneRibbon::render() {
-    gl::setMatrices(*_cameraOrtho);
-    _vBg->render(GlobalSettings::getInstance().isInDark ? _texBgDark : _texBg);
+    if(_state == 0) {
+        renderWireFrame();
+        return;
+    }
+    
+    if(_state > 1) {
+        gl::setMatrices(*_cameraOrtho);
+        _vBg->render(GlobalSettings::getInstance().isInDark ? _texBgDark : _texBg);
+    }
     
     Area viewport = gl::getViewport();
     
@@ -113,21 +125,59 @@ void SceneRibbon::render() {
     gl::setViewport(_strokes->getBounds());
     gl::setMatrices(*_camera);
     gl::rotate(sceneQuat->quat);
+    
+    int state = 1;
     for(int i =0; i<_ribbons.size(); i++) {
-        _ribbons[i]->render(_brushes[_ribbons[i]->textureIndex]);
+        if(_ribbons.size() == 1) state = 4;
+        else {
+            if(i == 0 ) state = 0;
+            else if ( i == _ribbons.size() - 1) state = 2;
+        }
+        _ribbons[i]->render(_brushes[_ribbons[i]->textureIndex], state);
     }
     
     if(isStarted) _vRibbon->render(_brushes[_vRibbon->textureIndex]);
     
-    
     for(int i =0; i<GlobalSettings::getInstance().inkDrops.size(); i++) {
         InkDrop* ink = GlobalSettings::getInstance().inkDrops[i];
-        _vDrop->render(ink, _drops[ink->textureIndex]);
+        int state = 1;
+        if(i == GlobalSettings::getInstance().inkDrops.size()-1 ) state = 2;
+        else if ( i ==0 ) state = 0;
+        _vDrop->render(ink, _drops[ink->textureIndex], state);
     }
     
     _strokes->unbindFramebuffer();
     
     gl::setViewport(viewport);
     gl::setMatrices(*_cameraOrtho);
-    _vPost->render(_strokes->getTexture(), _movie.getTexture(), _texBg);
+    _vPost->render(_strokes->getTexture(), _movie.getTexture(), _texBg, _state > 2);
+}
+
+
+void SceneRibbon::renderWireFrame() {
+    gl::color(91.0/255.0, 120.0/255.0, 118/255.0);
+    for(int i=0; i<GlobalSettings::getInstance().pointsSpline.size() ; i++ ) {
+      gl::drawSphere(GlobalSettings::getInstance().pointsSpline[i], 1);
+    }
+    
+    
+    gl::color(143/255.0, 158/255.0, 139/255.0);
+    float width = GlobalSettings::getInstance().ribbonWidth * .5;
+    for(int i=0; i<GlobalSettings::getInstance().pointsSpline.size() ; i++ ) {
+        Vec3f p = GlobalSettings::getInstance().pointsSpline[i];
+        Vec3f pLeft = p + GlobalSettings::getInstance().points[i]*width;
+        Vec3f pRight = p - GlobalSettings::getInstance().points[i]*width;
+        
+        gl::drawLine(p, pLeft);
+        gl::drawLine(p, pRight);
+    }
+    
+    
+    gl::color(242/255.0, 230/255.0, 182/255.0);
+    for(int i=0; i<GlobalSettings::getInstance().pointsSpline.size() ; i++ ) {
+        Vec3f p = GlobalSettings::getInstance().pointsSpline[i];
+        Vec3f pNormal = p + GlobalSettings::getInstance().pointsNormal[i]*width;
+        
+        gl::drawLine(p, pNormal);
+    }
 }

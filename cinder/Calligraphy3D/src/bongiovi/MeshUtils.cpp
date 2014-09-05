@@ -51,7 +51,7 @@ gl::VboMesh MeshUtils::createPlane(float size, int segments) {
         }
     }
 
-    gl::VboMesh mesh = gl::VboMesh(positions.size(), indices.size(), layout, GL_TRIANGLES);
+    gl::VboMesh mesh(positions.size(), indices.size(), layout, GL_TRIANGLES);
     mesh.bufferPositions(positions);
     mesh.bufferIndices(indices);
     mesh.bufferTexCoords2d(0, coords);

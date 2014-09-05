@@ -11,5 +11,4 @@ void main(void) {
     
     if(isInDark)        gl_FragColor.rgb = vec3(.93, .768, .439)*1.1;
     else                gl_FragColor.rgb = vec3(.5);
-//    gl_FragColor    = vec4(1.0);
 }
